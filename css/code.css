@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 12px;
+}
+
+.example {
+    background-color: black;
+    display: flex;
+    height: 40px;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    /* z-index: 1; */
+    margin-bottom: 25px;
+}
+
+.zindex {
+    z-index: 220;
+}
+
+.example>ul {
+    display: flex;
+    /* background-color: black; */
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.example ul li {
+    list-style: none;
+    padding-top: 7px;
+}
+
+.example ul li a {
+    color: white;
+    display: block;
+    padding: 5px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.2s ease-in 0.5ms;
+}
+
+.example ul li a:hover {
+    color: black;
+    background-color: white;
+}
+
+.comment {
+    color: green;
+    white-space: break-spaces;
+}
+
+pre,
+code {
+    font-size: 12px;
+}
+
+tt {
+    font-size: 1.2em;
+}
+
+pre {
+    margin: 0px 0px 20px;
+}
+
+pre.codeinput {
+    padding: 10px;
+    border: 1px solid #d3d3d3;
+    background: #f7f7f7;
+    margin: 0px 0px 20px;
+    color: #4c4c4c;
+}
+
+pre.error {
+    color: red;
+}
+
+span.keyword {
+    color: #0000FF
+}
+
+span.string {
+    color: #A020F0
+}
+
+span.untermstring {
+    color: #B20000
+}
+
+span.syscmd {
+    color: #B28C00
+}
+
+span.typesection {
+    color: #A0522D
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 50px;
+}
+@media only screen and (max-width: 410px){
+    span.comment {
+        color: blue;
+    }
+}

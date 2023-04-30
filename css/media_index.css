@@ -1,0 +1,30 @@
+@media only screen and (max-width: 590px){
+    .container{
+        height: 400px;
+    }
+    .container::before{
+        height: 400px;
+        top: 100px;
+    }
+}
+@media only screen and (max-width: 410px){
+    .container{
+        height: 400px;
+    }
+    .container p{
+        width: 200px;
+    }
+    .container::before{
+        height: 400px;
+        top: 250px;
+    }
+    .box-size{
+        width: 200px;
+    }
+    .main_container>p{
+        font-size: 3rem;
+    }
+    .ancher-style-2{
+        font-size: 2.2rem;;
+    }
+}

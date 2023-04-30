@@ -1,0 +1,76 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+}
+.container p{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    color: rgb(0, 0, 0);
+    width: 400px;
+    font-weight: 600;
+    padding: 10px 0;
+    font-size: 2.9rem;
+}
+.container::before{
+    content: '';
+    background: url(../images/bg.jpg) no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 450px;
+    top: 50px;
+    left: 0;
+    z-index: -1;
+    opacity: 0.59;
+}
+.main_container{
+    display: flex;
+    justify-content: space-around;
+    height: max-content;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+.main_container>p{
+    display: block;
+    width: 100%;
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.box-size{
+    border: 2px solid;
+    border-radius: 10px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    font-size: 35px;
+    background-color: burlywood;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    margin: inherit;
+}
+/* url('bg.png') 
+                no-repeat center center/cover; */
+
+.coding{
+    border: 2px solid;
+}
+.image-style{
+    width: 100%;
+    padding: 15px;
+    border-radius: 25px;
+}
+
+.ancher-style-2{
+    color: black;
+    font-size: 2.5rem;
+}
+

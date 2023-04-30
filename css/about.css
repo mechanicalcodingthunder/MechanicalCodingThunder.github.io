@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 12px;
+}
+
+.about{
+    border: 2px solid black;
+    margin: 3px 0 3px 0;
+    height: 590px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    /* align-items: center; */
+}
+img{
+    width: 250px;
+    height: fit-content;
+    padding: 5px;
+
+}
+.details{
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.details .bio-data{
+    padding: 5px;
+    width: 250px;
+    /* margin: auto; */
+}
+.details .qual{
+    display: block;
+    color: rebeccapurple;
+    text-align: center;
+}

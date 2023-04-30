@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanical Noob Coder</title>
+    <meta name="generator" content="MATLAB 9.11">
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+    <meta name="DC.date" content="2023-01-12">
+    <meta name="DC.source" content="lab1.m">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/code.css">
+</head>
+
+<body>
+    <div class="main_body">
+    <header>
+        <nav id="navbar" class="stick_top">
+            <div>
+                <a class="logo ancher-style" href="../index.html">Mechanical Noob Coder</a>
+            </div>
+            <ul>
+                <li><a class="ancher-style" href="../index.html">Home</a></li>
+                <li class="sub-menu">
+                    <a class="ancher-style" href="#">Resources<span class="carret"></span></a>
+                    <ul id="dropdown">
+                        <li><a class="ancher-style" href="../pages/mechanical.html">Mechanical</a></li>
+                        <li><a class="ancher-style" href="../pages/cht_course.html">Coding</a></li>
+                    </ul>
+                </li>
+                <li><a class="ancher-style" href="#">Services</a></li>
+                <li><a class="ancher-style" href="../pages/about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <div class="example sticky">
+            <ul>
+                <li><a href="#1">Example 1</a></li>
+                <li><a href="#2">Example 2</a></li>
+                <li><a href="#3">Example 3</a></li>
+                <li><a href="#4">Example 4</a></li>
+                <li><a href="#5">Example 5</a></li>
+                <li><a href="#6">Example 6</a></li>
+            </ul>
+        </div>
+        <h2 id="1">Example 1</h2>
+        <pre class="codeinput"><span class="comment">%{
+</span><span class="comment">create two random vector A and B then use a for loop to create a vector C
+</span><span class="comment">such that:
+</span><span class="comment">&gt; first element of C is sum of firstelement of A and last element of B
+</span><span class="comment">&gt; and second element of C is sum of second element of A and second
+</span><span class="comment">  last element of B
+</span><span class="comment">%}
+</span>clc; clear;
+N = 10;
+A = randi(100,N,1);
+B = randi(100,N,1);   <span class="comment">% creating a B matrix of 10X1</span>
+C = zeros(N,1);
+<span class="keyword">for</span> i = 1:N
+    C(i,1) = A(i,1)+B(N+1-i,1);
+<span class="keyword">end</span>
+disp(A);
+disp(B);
+disp(C);
+</pre>
+        <pre class="codeoutput">    82
+    91
+    13
+    92
+    64
+    10
+    28
+    55
+    96
+    97
+
+    16
+    98
+    96
+    49
+    81
+    15
+    43
+    92
+    80
+    96
+
+   178
+   171
+   105
+   135
+    79
+    91
+    77
+   151
+   194
+   113
+
+</pre>
+    </div>
+    </div>
+    <footer>
+        <div class="center">
+            Copyright &copy; https://mechcoder/com. All rights
+        </div>
+    </footer>
+</body>
+
+</html>
