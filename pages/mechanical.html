@@ -8,6 +8,7 @@
     <title>Mechanical Noob Coder</title>
     <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/mech.css">
+    <script src="/js/read-excel-file.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
@@ -34,13 +35,26 @@
             </nav>
         </header>
         <div id="mysidebar" class="sidenav">
-            <a href="">Workshop Technology</a>
-            <a href="">Heat Transfer</a>
+            <a href="#" onclick="anchor_show()">Workshop Technology</a>
         </div>
         <div class="main-content">
-            <p>
-            <embed src="" type="">
-            </p>
+            <div class="cal hide" id="cal">
+                <label for="number">Enter your Roll No</label>
+                <input type="text" onkeypress="return onlyNumberkey(event)" maxlength="12" id="number" name="number">
+                <button type="button" id="show_result" onclick="showresult(event)">Show Result</button>
+                <p class="result hide" id="result">Hhh</p>
+            <div class="table_container">
+                <p class="">No result available</p>
+                <table id="table" class="hide">
+                    <thead>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            </div>
         </div>
     </div>
     <footer>
@@ -50,5 +64,5 @@
     </footer>
 </body>
 <script type="text/javascript" src="/js/content.js"></script>
-
+<script type="text/javascript" src="/js/marks.js"></script>
 </html>
