@@ -9,33 +9,58 @@ html{
 }
 
 .about{
-    border: 2px solid black;
-    margin: 3px 0 3px 0;
-    height: 590px;
     display: flex;
+    height: 590px;
     justify-content: center;
     font-size: 1.5rem;
+    position: relative;
+    background-color: #2f3548da;
+    /* border: 2px solid black; */
+    align-items: center;
+    z-index: -1;
+
     /* align-items: center; */
 }
 img{
     width: 250px;
-    height: fit-content;
+    height: 250px;
+    border-radius: 50%;
+    /* height: fit-content; */
     padding: 5px;
 
 }
+
+.details::before{
+    content: '';
+    background-color: rgb(255, 153, 127);
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.89;
+    border-radius: 25px;
+}
+
 .details{
-    border: 2px solid;
+    height: 490px;
+    width: 500px;
+    border-radius: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    box-shadow: 20px 20px 50px #a53c3c;
 }
+
 .details .bio-data{
     padding: 5px;
-    width: 250px;
+    width: 350px;
+    display: flex;
     /* margin: auto; */
 }
 .details .qual{
     display: block;
     color: rebeccapurple;
-    text-align: center;
+    /* text-align: center; */
 }

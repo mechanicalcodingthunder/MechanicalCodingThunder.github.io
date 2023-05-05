@@ -3,15 +3,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 450px;
+    height: 100%;
 }
 .container p{
-    margin-left: auto;
-    margin-right: auto;
+    margin: 50px auto auto auto;
     text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    color: rgb(0, 0, 0);
+    color: white;
     width: 400px;
     font-weight: 600;
     padding: 10px 0;
@@ -19,12 +16,11 @@
 }
 .container::before{
     content: '';
-    background: url(/images/bg.jpg) no-repeat center center/cover;
+    background: url(../images/complex-technology-gear-wallpaper-preview.jpg) no-repeat center center/cover;
     position: absolute;
     width: 100%;
-    height: 450px;
+    height: 30%;
     top: 50px;
-    left: 0;
     z-index: -1;
     opacity: 0.59;
 }
@@ -39,38 +35,34 @@
 .main_container>p{
     display: block;
     width: 100%;
-    font-size: 4rem;
+    font-size: 2.7rem;
     font-weight: 600;
     text-align: center;
 }
 
 .box-size{
-    border: 2px solid;
-    border-radius: 10px;
-    width: 400px;
+    border: 2px solid #a430308c;
+    border-radius: 50px;
+    width: 350px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     font-size: 35px;
-    background-color: burlywood;
+    background-color: #a430308c;
     flex-wrap: wrap;
-    align-content: center;
+    justify-content: center;
     align-items: center;
     margin: inherit;
 }
-/* url('bg.png') 
-                no-repeat center center/cover; */
 
-.coding{
-    border: 2px solid;
-}
 .image-style{
-    width: 100%;
+    width: 80%;
     padding: 15px;
-    border-radius: 25px;
+    border-radius: 80px;
 }
 
 .ancher-style-2{
-    color: black;
+    color: white;
     font-size: 2.5rem;
 }
 
