@@ -9,15 +9,16 @@ html{
 }
 .sidenav{
     height: 92%;
-    width: 250px;
+    width: 160px;
     position: fixed;
     top: 50px;
     left: 0;
     background-color: #111;
-    padding-top: 20px;
+    padding-top: 10px;
+    text-align: center;
 }
 .sidenav a{
-    padding: 10px 8px 10px 20px;
+    padding: 10px 8px 10px 8px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
@@ -27,8 +28,11 @@ html{
     color: #f1f1f1;
 }
 .main-content{
-    margin-left: 250px;
+    margin-left: 160px;
     padding:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -37,6 +41,7 @@ html{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 label{
     font-size: 1.5rem;
@@ -102,6 +107,7 @@ td {
     color: #fff;
     background: #23242a;
     box-shadow:0 1px 1px hsl(0deg, 0%, 0% / 0.075);
+    border-radius: 10px;
 }
 
 .table_container p{
@@ -126,4 +132,31 @@ footer{
     width: 100%;
     margin-bottom: 5px;
     text-align: center;
+}
+@media only screen and (max-width: 640px){
+    .sidenav{
+        position: static;
+        height: auto;
+        width: 100vw;
+        top: 50px;
+        left: 0;
+        background-color: #111;
+        padding-top: 0px;
+        top: 100px;
+    }
+    .main-content{
+        width: 100vw;
+        margin: 0;
+        top: 100px;
+        padding:10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+}
+@media only screen and (max-width: 410px){
+    .sidenav{
+        top: 250px;
+    }
 }
