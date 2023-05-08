@@ -49,9 +49,11 @@ img{
     color: white;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
     box-shadow: 20px 20px 50px rgb(30 75 139 / 0%);
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .details .bio-data{
@@ -61,7 +63,7 @@ img{
     /* margin: auto; */
 }
 .details .qual{
-    display: block;
+    display: flex;
     color: #c1ffa3;
     /* text-align: center; */
 }
