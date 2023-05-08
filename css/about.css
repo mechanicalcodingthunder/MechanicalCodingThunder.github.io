@@ -15,17 +15,12 @@ html{
     font-size: 1.5rem;
     position: relative;
     background-color: #2f3548da;
-    /* border: 2px solid black; */
     align-items: center;
-    z-index: -1;
-
-    /* align-items: center; */
 }
 img{
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    /* height: fit-content; */
     padding: 5px;
 
 }
