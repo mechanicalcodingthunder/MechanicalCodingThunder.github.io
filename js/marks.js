@@ -3,14 +3,24 @@ window.onload = function () {
     init();
 }
 function WT(ev) {
-    console.log("WT")
+    console.log(ev.target.nextElementSibling);
+    if (ev.target.nextElementSibling.classList.contains("clicked")){
+        ev.target.nextElementSibling.classList.remove("clicked");
+        ev.target.classList.add("clicked");
+    }
     fetch("/Upload/first.xlsx").then((res) => res.blob()).then(blob => readXlsxFile(blob)).then((rows) => read_data(rows))
     delete_table();
     init();
+    document.getElementById("mysidebar").children[0];
     // document.getElementById("cal").classList.remove("hide")
 }
+
 function EDM(ev) {
-    console.log("EDM")
+    console.log(ev.target.nextElementSibling);
+    if (ev.target.previousElementSibling.classList.contains("clicked")){
+        ev.target.previousElementSibling.classList.remove("clicked");
+        ev.target.classList.add("clicked");
+    }
     fetch("/Upload/final.xlsx").then((res) => res.blob()).then(blob => readXlsxFile(blob)).then((rows) => read_data(rows))
     delete_table();
     init();
