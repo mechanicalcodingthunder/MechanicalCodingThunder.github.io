@@ -2,12 +2,37 @@ window.onload = function () {
     fetch("/Upload/first.xlsx").then((res) => res.blob()).then(blob => readXlsxFile(blob)).then((rows) => read_data(rows))
     init();
 }
-function anchor_show(ev) {
-    console.log("cic")
-    document.getElementById("cal").classList.remove("hide")
+function WT(ev) {
+    console.log("WT")
+    fetch("/Upload/first.xlsx").then((res) => res.blob()).then(blob => readXlsxFile(blob)).then((rows) => read_data(rows))
+    delete_table();
+    init();
+    // document.getElementById("cal").classList.remove("hide")
+}
+function EDM(ev) {
+    console.log("EDM")
+    fetch("/Upload/final.xlsx").then((res) => res.blob()).then(blob => readXlsxFile(blob)).then((rows) => read_data(rows))
+    delete_table();
+    init();
+    // document.getElementById("cal").classList.remove("hide")
 }
 function init(){
     document.getElementById("number").value="";
+}
+function delete_table(){
+    const tbl = document.getElementById("table");
+    tr1 = tbl.children[0].children[0];
+    tr2 = tbl.children[0].children[1];
+    while (tr1.hasChildNodes()){
+        tr1.removeChild(tr1.firstChild);
+    }
+    while (tr2.hasChildNodes()){
+        tr2.removeChild(tr2.firstChild);
+    }
+    if (tbl.previousElementSibling.classList.contains("hide")) {
+        tbl.previousElementSibling.classList.remove("hide");
+        tbl.classList.add("hide");
+    }
 }
 function onlyNumberkey(evt) {
     var ass = (evt.which) ? evt.which : evt.keyCode
@@ -27,6 +52,7 @@ function create_table(value) {
     const tbl = document.getElementById("table");
     const pr = tbl.previousElementSibling;
     if (value.length == 12) {
+        // console.log(obj.length)
         for (i = 2; i < obj.length; i++) {
             if (obj[i][2] == value) {
                 console.log(obj[i][2])
@@ -66,4 +92,5 @@ function create_table(value) {
 let obj
 function read_data(data) {
     obj = data;
+    // console.log(obj)
 }
