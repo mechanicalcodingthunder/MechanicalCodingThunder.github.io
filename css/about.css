@@ -70,9 +70,9 @@ p{
 .inform{
     margin-left: 20px;
 }
-ul{
+div.about ul{
     margin: 0 0 0 20px;
 }
-li{
+div.about li{
     margin: 0 0 0 50px;
 }
