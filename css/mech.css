@@ -114,7 +114,7 @@ td {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     overflow: auto;
     color: #fff;
     background: #23242a;
