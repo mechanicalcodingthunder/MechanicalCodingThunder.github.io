@@ -124,6 +124,7 @@ td {
 
 .table_container p{
     text-align: center;
+    width: 100%;
 }
 
 .table_container::-webkit-scrollbar {
