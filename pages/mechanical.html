@@ -25,36 +25,42 @@
                     <li class="sub-menu">
                         <a class="ancher-style" href="#">Resources<span class="carret"></span></a>
                         <ul id="dropdown">
-                            <li><a class="ancher-style" href="mechanical">Mechanical</a></li>
-                            <li><a class="ancher-style" href="cht_course">Coding</a></li>
+                            <li><a class="ancher-style" href="mechanical.html">Mechanical</a></li>
+                            <li><a class="ancher-style" href="cht_course.html">Coding</a></li>
                         </ul>
                     </li>
                     <li><a class="ancher-style" href="#">Services</a></li>
-                    <li><a class="ancher-style" href="about">About</a></li>
+                    <li><a class="ancher-style" href="about.html">About</a></li>
                 </ul>
             </nav>
         </header>
         <div id="mysidebar" class="sidenav">
-            <a class="sidenav_style clicked" href="#" onclick="WT(event)">Workshop Technology</a>
-            <a class="sidenav_style" href="#" onclick="EDM(event)">EDM</a>
+            <button class="sidenav_btn_style clicked" onclick="WT(event)">Workshop Technology</button>
+            <button class="sidenav_btn_style" onclick="EDM(event)">EDM</button>
         </div>
+
         <div class="main-content">
-            <div class="cal" id="cal">
-                <label for="number">Enter your Roll No</label>
-                <input type="text" onkeypress="return onlyNumberkey(event)" maxlength="12" id="number" name="number">
-                <button type="button" id="show_result" onclick="showresult(event)">Show Result</button>
-                <p class="result hide" id="result">Hhh</p>
-            <div class="table_container">
-                <p class="">No result available</p>
-                <table id="table" class="hide">
-                    <thead>
-                        <tr>
-                        </tr>
-                        <tr>
-                        </tr>
-                    </thead>
-                </table>
-            </div>
+            <button type="button" id="Check_result" class="btn" onclick="display_popup(event)">Check Result</button>
+            <div class="popup">
+                <button id="close">&times;</button>
+                <div class="cal" id="cal">
+                    <label for="number">Enter your Roll No</label>
+                    <input type="text" onkeypress="return onlyNumberkey(event)" maxlength="12" id="number"
+                        name="number">
+                    <button type="button" id="show_result" class="btn" onclick="showresult(event)">Show Result</button>
+                    <p class="result hide" id="result">Hhh</p>
+                    <div class="table_container">
+                        <p class="">No result available</p>
+                        <table id="table" class="hide">
+                            <thead>
+                                <tr>
+                                </tr>
+                                <tr>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -66,4 +72,5 @@
 </body>
 <script type="text/javascript" src="/js/content.js"></script>
 <script type="text/javascript" src="/js/marks.js"></script>
+
 </html>

@@ -1,65 +1,114 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html{
+
+html {
     scroll-behavior: smooth;
     font-size: 12px;
 }
-.sidenav{
+
+.sidenav {
     height: 92%;
     width: 160px;
     position: fixed;
     top: 50px;
     left: 0;
     background-color: #111;
-    padding-top: 10px;
+    padding-top: 5px;
     text-align: center;
 }
 
-.sidenav_style{
+.sidenav_btn_style {
     padding: 10px 8px 10px 8px;
-    margin: 5px;
+    width: 95%;
+    margin: 5px auto 5px auto;
     text-decoration: none;
     font-size: 25px;
     color: grey;
     display: block;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
 }
 
-.clicked{
+.clicked {
+    color: black;
+    background: #fff;
+}
+
+.sidenav a:hover {
     color: black;
     background: #fff;
     border-radius: 10px;
 }
 
-.sidenav a:hover{
-    color: black;
-    background: #fff;
-    border-radius: 10px;
-}
-
-.main-content{
+.main-content {
     margin-left: 160px;
-    padding:10px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
 
-.cal{
+.popup {
+    background-color: #ffffff;
+    width: 420px;
+    padding: 30px 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    margin-left: 80px;
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-family: “Poppins”, sans-serif;
+    text-align: center;
+    display: none;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, .2);
+}
+
+h2 {
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+#close {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px 10px auto;
+    padding: 0px 0 2px 0;
+    background-color: transparent;
+    font-size: 30px;
+    color: #ffffff;
+    background: #03549a;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+.cal {
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
-label{
+
+label {
     font-size: 1.5rem;
     font-weight: 600;
+    color: black;
 }
-#number{
+
+#number {
     height: 40px;
     width: 250px;
     padding: 5px auto;
@@ -69,15 +118,19 @@ label{
     border: 2px solid red;
     border-radius: 10px;
 }
-#show_result{
+
+.btn {
     margin: 5px 0 5px 0;
-    border: 2px solid yellow;
+    border: 2px solid rgb(255, 81, 0);
+    border-radius: 10px;
     width: 100px;
     height: 40px;
     font-size: 1.2rem;
     font-weight: 600;
+    cursor: pointer;
 }
-.hide{
+
+.hide {
     display: none;
 }
 
@@ -86,25 +139,30 @@ table {
     border-collapse: collapse;
     font-size: 0.9rem;
 }
-.hide{
+
+.hide {
     display: none;
 }
+
 table,
 th,
 td {
     color: #fff;
     font-size: 1.1rem;
 }
-th,td{
+
+th,
+td {
     width: 120px;
     padding: 2px 5px;
     border-bottom: 1px solid;
 }
 
-th span{
+th span {
     display: inline-block;
     width: 120px;
 }
+
 td {
     text-align: center;
 }
@@ -114,17 +172,16 @@ td {
     width: 100%;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
+    justify-content: center;
     overflow: auto;
     color: #fff;
     background: #23242a;
-    box-shadow:0 1px 1px hsl(0deg, 0%, 0% / 0.075);
+    box-shadow: 0 1px 1px hsl(0deg, 0%, 0% / 0.075);
     border-radius: 10px;
 }
 
-.table_container p{
+.table_container p {
     text-align: center;
-    width: 100%;
 }
 
 .table_container::-webkit-scrollbar {
@@ -140,14 +197,15 @@ td {
     height: 22px;
 }
 
-footer{
-    position:static;
+footer {
+    position: static;
     width: 100%;
     margin-bottom: 5px;
     text-align: center;
 }
-@media only screen and (max-width: 640px){
-    .sidenav{
+
+@media only screen and (max-width: 680px) {
+    .sidenav {
         position: static;
         height: auto;
         width: 100vw;
@@ -157,19 +215,31 @@ footer{
         padding-top: 0px;
         top: 100px;
     }
-    .main-content{
+
+    .main-content {
         width: 100vw;
         margin: 0;
         top: 100px;
-        padding:10px;
+        padding: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
-    
+
+    }
+    .popup {
+        width: 370px;
+        top: 60%;
+        margin: auto;
     }
 }
-@media only screen and (max-width: 410px){
-    .sidenav{
+
+@media only screen and (max-width: 410px) {
+    .sidenav {
         top: 250px;
+    }
+
+    .popup {
+        width: 330px;
+        top: 75%;
     }
 }

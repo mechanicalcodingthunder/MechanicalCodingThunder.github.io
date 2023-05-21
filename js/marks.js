@@ -14,7 +14,9 @@ function WT(ev) {
     document.getElementById("mysidebar").children[0];
     // document.getElementById("cal").classList.remove("hide")
 }
-
+document.querySelector("#close").addEventListener("click", function(){
+    document.querySelector(".popup").style.display = "none";
+});
 function EDM(ev) {
     console.log(ev.target.nextElementSibling);
     if (ev.target.previousElementSibling.classList.contains("clicked")){
@@ -28,6 +30,9 @@ function EDM(ev) {
 }
 function init(){
     document.getElementById("number").value="";
+}
+function display_popup(evt) {
+    document.querySelector(".popup").style.display = "block";
 }
 function delete_table(){
     const tbl = document.getElementById("table");
