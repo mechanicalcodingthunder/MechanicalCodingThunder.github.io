@@ -45,7 +45,7 @@
                 <button id="close">&times;</button>
                 <div class="cal" id="cal">
                     <label for="number">Enter your Roll No</label>
-                    <input type="text" onkeypress="return onlyNumberkey(event)" maxlength="12" id="number"
+                    <input inputmode="numeric" pattern="[0-9]*" type="text" onkeypress="return onlyNumberkey(event)" maxlength="12" id="number"
                         name="number">
                     <button type="button" id="show_result" class="btn" onclick="showresult(event)">Show Result</button>
                     <p class="result hide" id="result">Hhh</p>
