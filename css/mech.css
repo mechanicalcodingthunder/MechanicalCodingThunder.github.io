@@ -180,7 +180,7 @@ td {
 }
 
 .table_container p {
-    text-align: center;
+    margin: auto;
 }
 
 .table_container::-webkit-scrollbar {
