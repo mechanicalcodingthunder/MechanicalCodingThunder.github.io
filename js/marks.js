@@ -4,6 +4,7 @@ window.onload = function () {
 }
 function WT(ev) {
     console.log(ev.target.nextElementSibling);
+    document.getElementById("Asm").classList.remove("hide");
     if (ev.target.nextElementSibling.classList.contains("clicked")){
         ev.target.nextElementSibling.classList.remove("clicked");
         ev.target.classList.add("clicked");
@@ -17,8 +18,12 @@ function WT(ev) {
 document.querySelector("#close").addEventListener("click", function(){
     document.querySelector(".popup").style.display = "none";
 });
+function open_file() {
+    window.open("/Upload/Ch_8 cutting fluid.pdf",'_blank')
+}
 function EDM(ev) {
     console.log(ev.target.nextElementSibling);
+    document.getElementById("Asm").classList.add("hide");
     if (ev.target.previousElementSibling.classList.contains("clicked")){
         ev.target.previousElementSibling.classList.remove("clicked");
         ev.target.classList.add("clicked");
