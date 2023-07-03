@@ -42,7 +42,7 @@
 
 .box-size{
     border: 2px solid #a430308c;
-    border-radius: 50px;
+    border-radius: 30px;
     width: 350px;
     height: 300px;
     display: flex;
@@ -56,9 +56,9 @@
 }
 
 .image-style{
-    width: 80%;
+    width: inherit;
     padding: 15px;
-    border-radius: 80px;
+    border-radius: 30px;
 }
 
 .ancher-style-2{
