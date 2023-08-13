@@ -38,7 +38,7 @@ img{
 }
 
 .details{
-    padding: 20px 0 20px 0;
+    padding: 20px;
     width: 500px;
     border-radius: 25px;
     color: white;
@@ -49,6 +49,7 @@ img{
     box-shadow: 20px 20px 50px rgb(30 75 139 / 0%);
     justify-content: space-around;
     flex-wrap: wrap;
+    background: linear-gradient(45deg, black, transparent);
 }
 
 .details .bio-data{
@@ -59,6 +60,7 @@ img{
 }
 p{
     margin: auto;
+    padding: 0 20px;
 }
 .details .qual{
     display: flex;
