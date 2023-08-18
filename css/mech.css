@@ -168,6 +168,29 @@ th span {
 td {
     text-align: center;
 }
+.prev_papers{
+    color:  white;
+    padding: 5px;
+    border-radius: 15px;
+    background: linear-gradient(90deg, rgba(124,93,106,1) 6%, rgba(99,133,172,1) 91%);
+    width: 100px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.prev_papers li{
+    list-style: none;
+    cursor: pointer;
+    padding: 5px 0;
+}
+.prev_papers li a{
+    text-decoration: none;
+    color: white;
+}
+
+.prev_papers li:hover{
+    background: red;
+}
 
 .table_container {
     height: 80px;

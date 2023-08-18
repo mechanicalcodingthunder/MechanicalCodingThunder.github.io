@@ -37,12 +37,17 @@
         <div id="mysidebar" class="sidenav">
             <button class="sidenav_btn_style clicked" onclick="WT(event)">Workshop Technology</button>
             <button class="sidenav_btn_style" onclick="EDM(event)">EDM</button>
+            <button class="sidenav_btn_style" onclick="PrevPaper(event)">Previous Year Paper</button>
         </div>
 
         <div class="main-content">
             <div class="btn_group">
                 <button type="button" id="Check_result" class="btn" onclick="display_popup(event)">Check Result</button>
                 <button type="button" id="Asm" class="btn" onclick="open_file()">Assignment 3 Reference Material</button>
+                <ul class="prev_papers hide">
+                    <li><a href="/Upload/WT-I.pdf" target="_blank">WT-I</a></li>
+                    <li><a href="/Upload/WT-II.pdf" target="_blank">WT-II</a></li>
+                </ul>
             </div>
             <div class="popup">
                 <button id="close">&times;</button>

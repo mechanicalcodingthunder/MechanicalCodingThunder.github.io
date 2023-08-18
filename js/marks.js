@@ -3,36 +3,72 @@ window.onload = function () {
     init();
 }
 function WT(ev) {
-    console.log(ev.target.nextElementSibling);
+    // console.log(ev.target.nextElementSibling);
     document.getElementById("Asm").classList.remove("hide");
-    if (ev.target.nextElementSibling.classList.contains("clicked")){
-        ev.target.nextElementSibling.classList.remove("clicked");
-        ev.target.classList.add("clicked");
+    const clickedall = document.querySelectorAll(".sidenav_btn_style");
+    clickedall.forEach((clicked)=>{
+        if (clicked.classList.contains("clicked")){
+            clicked.classList.remove("clicked");
+        }
+    })
+    if (document.querySelector(".prev_papers").classList.contains("hide")){
+        return;
+    }else{
+        document.querySelector(".prev_papers").classList.add("hide");
     }
+    ev.target.classList.add("clicked");
+    document.getElementById("Check_result").classList.remove("hide");
     fetch("/Upload/first.xlsx").then((res) => res.blob()).then(blob => readXlsxFile(blob)).then((rows) => read_data(rows))
     delete_table();
     init();
     document.getElementById("mysidebar").children[0];
     // document.getElementById("cal").classList.remove("hide")
 }
+
+function EDM(ev) {
+    // console.log(ev.target.nextElementSibling);
+    document.getElementById("Asm").classList.add("hide");
+    document.getElementById("Check_result").classList.remove("hide");
+    const clickedall = document.querySelectorAll(".sidenav_btn_style");
+    clickedall.forEach((clicked)=>{
+        if (clicked.classList.contains("clicked")){
+            clicked.classList.remove("clicked");
+        }
+    })
+
+    if (document.querySelector(".prev_papers").classList.contains("hide")){
+        return;
+    }else{
+        document.querySelector(".prev_papers").classList.add("hide");
+    }
+    ev.target.classList.add("clicked");
+    fetch("/Upload/final.xlsx").then((res) => res.blob()).then(blob => readXlsxFile(blob)).then((rows) => read_data(rows))
+    delete_table();
+    init();
+    // document.getElementById("cal").classList.remove("hide")
+}
+function PrevPaper(ev){
+    // console.log(ev.target)
+    const clickedall = document.querySelectorAll(".sidenav_btn_style");
+    clickedall.forEach((clicked)=>{
+        if (clicked.classList.contains("clicked")){
+            clicked.classList.remove("clicked");
+        }
+    })
+    ev.target.classList.add("clicked");
+    document.getElementById("Asm").classList.add("hide");
+    document.getElementById("Check_result").classList.add("hide");
+    document.querySelector(".prev_papers").classList.remove("hide");
+
+}
+
 document.querySelector("#close").addEventListener("click", function(){
     document.querySelector(".popup").style.display = "none";
 });
 function open_file() {
     window.open("/Upload/Ch_8 cutting fluid.pdf",'_blank')
 }
-function EDM(ev) {
-    console.log(ev.target.nextElementSibling);
-    document.getElementById("Asm").classList.add("hide");
-    if (ev.target.previousElementSibling.classList.contains("clicked")){
-        ev.target.previousElementSibling.classList.remove("clicked");
-        ev.target.classList.add("clicked");
-    }
-    fetch("/Upload/final.xlsx").then((res) => res.blob()).then(blob => readXlsxFile(blob)).then((rows) => read_data(rows))
-    delete_table();
-    init();
-    // document.getElementById("cal").classList.remove("hide")
-}
+
 function init(){
     document.getElementById("number").value="";
 }
