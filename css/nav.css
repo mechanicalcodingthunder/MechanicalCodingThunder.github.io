@@ -58,7 +58,7 @@ html {
 .ancher-style {
     /* position: relative; */
     display: block;
-    height: 50px;
+    /* height: 50px; */
     color: #ffffff;
     font-weight: 500;
     /* text-transform: uppercase; */
@@ -78,14 +78,6 @@ html {
     color: black;
     background-color: white;
     border-radius: 10px;
-}
-
-.sun-menu {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: center;
 }
 
 .carret {
@@ -120,11 +112,29 @@ html {
     list-style: none;
 }
 
+
+#navbar ul li.sub-menu ul#dropdown li.mech-drop ul{
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 99999;
+    background-color: rgb(0 50 142);
+    border-radius: 10px;
+    position: absolute;
+    padding: 5px;
+    top: 5px;
+    left: 155px;
+    width: 100px;
+}
 #navbar ul li.sub-menu:hover>ul#dropdown {
     visibility: visible;
     opacity: 1;
 }
-
+#navbar ul li.sub-menu ul#dropdown li.mech-drop:hover>ul{
+    visibility: visible;
+    opacity: 1;
+}
 /* navbar ended */
 footer {
     position: static;
