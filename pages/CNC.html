@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanical Coding Thunder</title>
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/mech.css">
+    <script src="/js/read-excel-file.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <div class="main_body">
+        <header>
+            <nav id="navbar" class="stick_top">
+                <div>
+                    <a class="logo ancher-style" href="/">Mechanical Coding Thunder</a>
+                </div>
+                <ul>
+                    <li><a class="ancher-style" href="/">Home</a></li>
+                    <li class="sub-menu">
+                        <a class="ancher-style" href="#">Resources<span class="carret"></span></a>
+                        <ul id="dropdown">
+                            <li class="mech-drop"><a class="ancher-style" href="#">Mechanical<span class="carret"></span></a>
+                            <ul>
+                                <li><a class="ancher-style" href="pages/WT-I.html">WT-I</li>
+                                <li><a class="ancher-style" href="pages/CNC.html">CNC</li>
+                                <li><a class="ancher-style" href="pages/EDM.html">EDM</li>
+                            </ul>
+                        </li>
+                            <li><a class="ancher-style" href="pages/cht_course.html">Coding</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="ancher-style" href="#">Services</a></li>
+                    <li><a class="ancher-style" href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="mysidebar" class="sidenav">
+            <button class="sidenav_btn_style clicked" onclick="WT(event)">Workshop Technology</button>
+            <button class="sidenav_btn_style" onclick="EDM(event)">EDM</button>
+            <button class="sidenav_btn_style" onclick="PrevPaper(event)">Previous Year Paper</button>
+        </div>
+
+        <div class="main-content">
+            <div class="btn_group">
+                <button type="button" id="Check_result" class="btn" onclick="display_popup(event)">Check Result</button>
+                <button type="button" id="Asm" class="btn" onclick="open_file()">Assignment 3 Reference Material</button>
+                <ul class="prev_papers hide">
+                    <li><a href="/Upload/WT-I.pdf" target="_blank">WT-I</a></li>
+                    <li><a href="/Upload/WT-II.pdf" target="_blank">WT-II</a></li>
+                </ul>
+            </div>
+            <div class="popup">
+                <button id="close">&times;</button>
+                <div class="cal" id="cal">
+                    <label for="number">Enter your Roll No</label>
+                    <input inputmode="numeric" pattern="[0-9]*" type="text" onkeypress="return onlyNumberkey(event)" maxlength="12" id="number"
+                        name="number">
+                    <button type="button" id="show_result" class="btn" onclick="showresult(event)">Show Result</button>
+                    <p class="result hide" id="result">Hhh</p>
+                    <div class="table_container">
+                        <p class="">No result available</p>
+                        <table id="table" class="hide">
+                            <thead>
+                                <tr>
+                                </tr>
+                                <tr>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="center">
+            Copyright &copy; Mechanical Coding Thunder
+        </div>
+    </footer>
+</body>
+<script type="text/javascript" src="/js/content.js"></script>
+<script type="text/javascript" src="/js/marks.js"></script>
+
+</html>
