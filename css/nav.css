@@ -124,7 +124,7 @@ html {
     position: absolute;
     padding: 5px;
     top: 5px;
-    left: 155px;
+    left: 152px;
     width: 100px;
 }
 #navbar ul li.sub-menu:hover>ul#dropdown {

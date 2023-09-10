@@ -1,60 +1,20 @@
-window.onload = function () {
-    fetch("/Upload/first.xlsx").then((res) => res.blob()).then(blob => readXlsxFile(blob)).then((rows) => read_data(rows))
-    init();
-}
+
 function WT(ev) {
-    // console.log(ev.target.nextElementSibling);
-    document.getElementById("Asm").classList.remove("hide");
-    const clickedall = document.querySelectorAll(".sidenav_btn_style");
-    clickedall.forEach((clicked)=>{
-        if (clicked.classList.contains("clicked")){
-            clicked.classList.remove("clicked");
-        }
-    })
-    if (document.querySelector(".prev_papers").classList.contains("hide")){
-        return;
-    }else{
-        document.querySelector(".prev_papers").classList.add("hide");
-    }
-    ev.target.classList.add("clicked");
-    document.getElementById("Check_result").classList.remove("hide");
-    fetch("/Upload/first.xlsx").then((res) => res.blob()).then(blob => readXlsxFile(blob)).then((rows) => read_data(rows))
+    fetch("/Upload/first.xlsx").then((res) => res.blob()).then(blob => readXlsxFile(blob)).then((rows) => read_data(rows));
+    document.querySelector(".popup").style.display = "block";
     delete_table();
     init();
-    document.getElementById("mysidebar").children[0];
     // document.getElementById("cal").classList.remove("hide")
 }
 
 function EDM(ev) {
-    // console.log(ev.target.nextElementSibling);
-    document.getElementById("Asm").classList.add("hide");
-    document.getElementById("Check_result").classList.remove("hide");
-    const clickedall = document.querySelectorAll(".sidenav_btn_style");
-    clickedall.forEach((clicked)=>{
-        if (clicked.classList.contains("clicked")){
-            clicked.classList.remove("clicked");
-        }
-    })
-
-    if (document.querySelector(".prev_papers").classList.contains("hide")){
-        return;
-    }else{
-        document.querySelector(".prev_papers").classList.add("hide");
-    }
-    ev.target.classList.add("clicked");
-    fetch("/Upload/final.xlsx").then((res) => res.blob()).then(blob => readXlsxFile(blob)).then((rows) => read_data(rows))
+    fetch("/Upload/final.xlsx").then((res) => res.blob()).then(blob => readXlsxFile(blob)).then((rows) => read_data(rows));
+    document.querySelector(".popup").style.display = "block";
     delete_table();
     init();
     // document.getElementById("cal").classList.remove("hide")
 }
 function PrevPaper(ev){
-    // console.log(ev.target)
-    const clickedall = document.querySelectorAll(".sidenav_btn_style");
-    clickedall.forEach((clicked)=>{
-        if (clicked.classList.contains("clicked")){
-            clicked.classList.remove("clicked");
-        }
-    })
     ev.target.classList.add("clicked");
     document.getElementById("Asm").classList.add("hide");
     document.getElementById("Check_result").classList.add("hide");
@@ -65,15 +25,19 @@ function PrevPaper(ev){
 document.querySelector("#close").addEventListener("click", function(){
     document.querySelector(".popup").style.display = "none";
 });
-function open_file() {
-    window.open("/Upload/Ch_8 cutting fluid.pdf",'_blank')
+
+function open_file(input) {
+    console.log(input)
+    const input_file = "/Upload/"+input;
+    window.open(input_file,'_blank')
 }
 
 function init(){
     document.getElementById("number").value="";
 }
 function display_popup(evt) {
-    document.querySelector(".popup").style.display = "block";
+
+    console.log(evt.target)
 }
 function delete_table(){
     const tbl = document.getElementById("table");
