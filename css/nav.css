@@ -8,9 +8,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #2b3259;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(15deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
 }
 
 html {
@@ -106,6 +104,7 @@ html {
     position: absolute;
     padding: 5px;
     top: 48px;
+    transition: 0.3s ease-in-out;
 }
 
 #navbar ul li.sub-menu>ul li {
@@ -119,13 +118,18 @@ html {
     visibility: hidden;
     opacity: 0;
     z-index: 99999;
-    background-color: rgb(0 50 142);
+    background: deeppink;
     border-radius: 10px;
     position: absolute;
     padding: 5px;
     top: 5px;
     left: 152px;
     width: 100px;
+    transition: 0.3s ease-in-out;
+}
+#navbar ul li.sub-menu ul#dropdown li.mech-drop ul li a{
+    font-weight: 600;
+    color: black;
 }
 #navbar ul li.sub-menu:hover>ul#dropdown {
     visibility: visible;
@@ -142,7 +146,7 @@ footer {
     /* margin-bottom: 5px; */
     text-align: center;
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(15deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
     color: white;
 }
 
@@ -163,7 +167,13 @@ footer {
 
     #navbar>ul>li.sub-menu>ul {
         top: 150px;
-        left: 100px;
-        background: deeppink;
+        left: 106px;
     }
+    #navbar>ul>li.sub-menu>ul li a{
+        font-size: 1.5rem;
+    }
+    #navbar ul li.sub-menu ul#dropdown li.mech-drop ul{
+        left: 145px;
+    }
+    
 }

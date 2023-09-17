@@ -45,7 +45,6 @@ html {
 }
 
 .main-content {
-    margin-left: 160px;
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -59,7 +58,6 @@ html {
     padding: 30px 40px;
     position: absolute;
     transform: translate(-50%, -50%);
-    margin-left: 80px;
     left: 50%;
     top: 50%;
     border-radius: 8px;

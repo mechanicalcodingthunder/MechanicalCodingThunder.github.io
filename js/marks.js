@@ -1,19 +1,14 @@
 
-function WT(ev) {
-    fetch("/Upload/first.xlsx").then((res) => res.blob()).then(blob => readXlsxFile(blob)).then((rows) => read_data(rows));
+function read_file(input) {
+    const input_file = "/Upload/"+input;
+    console.log(input_file)
+    fetch(input_file).then((res) => res.blob()).then(blob => readXlsxFile(blob)).then((rows) => read_data(rows));
     document.querySelector(".popup").style.display = "block";
     delete_table();
     init();
     // document.getElementById("cal").classList.remove("hide")
 }
 
-function EDM(ev) {
-    fetch("/Upload/final.xlsx").then((res) => res.blob()).then(blob => readXlsxFile(blob)).then((rows) => read_data(rows));
-    document.querySelector(".popup").style.display = "block";
-    delete_table();
-    init();
-    // document.getElementById("cal").classList.remove("hide")
-}
 function PrevPaper(ev){
     ev.target.classList.add("clicked");
     document.getElementById("Asm").classList.add("hide");
@@ -35,10 +30,7 @@ function open_file(input) {
 function init(){
     document.getElementById("number").value="";
 }
-function display_popup(evt) {
 
-    console.log(evt.target)
-}
 function delete_table(){
     const tbl = document.getElementById("table");
     tr1 = tbl.children[0].children[0];
