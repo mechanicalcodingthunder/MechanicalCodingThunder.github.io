@@ -173,7 +173,8 @@ footer {
         font-size: 1.5rem;
     }
     #navbar ul li.sub-menu ul#dropdown li.mech-drop ul{
-        left: 145px;
+        left: 20px;
+        top: auto;
     }
     
 }
