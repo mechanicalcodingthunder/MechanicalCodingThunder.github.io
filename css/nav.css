@@ -103,7 +103,8 @@ html {
     border-radius: 10px;
     position: absolute;
     padding: 2px;
-    top: 48px;
+    top: auto;
+    left: auto;
     transition: 0.3s ease-in-out;
 }
 
@@ -155,9 +156,9 @@ footer {
         flex-direction: column;
     }
 
-    #navbar>ul>li.sub-menu>ul {
+/*     #navbar>ul>li.sub-menu>ul {
         top: 100px;
-    }
+    } */
 }
 
 @media only screen and (max-width: 410px) {
