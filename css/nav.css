@@ -165,11 +165,11 @@ footer {
     #navbar ul {
         flex-direction: column;
     }
-
+/* 
     #navbar>ul>li.sub-menu>ul {
         top: auto;
         left: 130px;
-    }
+    } */
     #navbar>ul>li.sub-menu>ul li a{
         font-size: 1.5rem;
     }
