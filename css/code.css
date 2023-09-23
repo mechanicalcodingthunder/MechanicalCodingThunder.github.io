@@ -26,8 +26,6 @@ html {
 
 .example>ul {
     display: flex;
-    /* background-color: black; */
-    flex-direction: column;
     justify-content: space-around;
 }
 
