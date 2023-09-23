@@ -12,7 +12,7 @@ html {
 .example {
     background-color: black;
     display: flex;
-    height: 40px;
+    height: fit-content;
     flex-wrap: wrap;
     align-content: space-between;
     justify-content: space-between;
@@ -32,6 +32,7 @@ h2 {
 .example>ul {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .example ul li {
