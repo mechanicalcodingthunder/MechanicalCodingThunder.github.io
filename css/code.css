@@ -20,7 +20,7 @@ html {
     margin-bottom: 25px;
 }
 h2 {
-    color: floral white;
+    color: floralwhite;
     padding: 0 10px;
     text-align: center;
     font-size: 2.0rem;
@@ -80,7 +80,9 @@ pre.codeinput {
     margin: 0 10px;
     border-radius: 20px;
 }
-
+pre.codeinput {
+    color: aliceblue;
+}
 pre.error {
     color: red;
 }
