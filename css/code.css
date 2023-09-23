@@ -80,7 +80,7 @@ pre.codeinput {
     margin: 0 10px;
     border-radius: 20px;
 }
-pre.codeinput {
+pre.codeoutput {
     color: aliceblue;
 }
 pre.error {
