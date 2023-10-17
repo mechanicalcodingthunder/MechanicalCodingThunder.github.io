@@ -9,8 +9,17 @@
     <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/mech.css">
     <script src="/js/read-excel-file.min.js"></script>
+    <script src="/js/jquery-3.6.3.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("ul#videos li a").click(function(e){
+                e.preventDefault();
+                $("#MyFrame").attr("src",$(this).attr("href"))
+            })
+        })
+    </script>
 </head>
 
 <body>
@@ -40,12 +49,17 @@
                 </ul>
             </nav>
         </header>
-        <!-- <div id="mysidebar" class="sidenav">
-            <button class="sidenav_btn_style clicked" onclick="WT(event)">Workshop Technology</button>
-            <button class="sidenav_btn_style" onclick="EDM(event)">EDM</button>
-            <button class="sidenav_btn_style" onclick="PrevPaper(event)">Previous Year Paper</button>
-        </div> -->
-
+        <div class="example sticky">
+            <ul id="videos">
+                <li><a href="/Upload/CNC_chapter_1.pdf">Chapter 1</a></li>
+                <li><a href="/Upload/CNC_chapter_2.pdf">Chapter 2</a></li>
+                <li><a href="/Upload/CNC_chapter_3.pdf">Chapter 3</a></li>
+                <li><a href="/Upload/CNC_chapter_4.pdf">Chapter 4</a></li>
+                <li><a href="">Chapter 5</a></li>
+                <li><a href="">Chapter 6</a></li>
+            </ul>
+        </div>
+        <iframe id="MyFrame" class="FRAME_Design" frameborder="0" width="500" height="375"></iframe>
         <div class="main-content">
             <div class="btn_group">
                 <button type="button" id="Check_result" class="btn" onclick="read_file('5th sem.xlsx')">Check Result</button>
@@ -85,6 +99,6 @@
     </footer>
 </body>
 <script type="text/javascript" src="/js/content.js"></script>
-<script type="text/javascript" src="/js/marks.js"></script>
+<script type="text/javascript" src="/js/mech.js"></script>
 
 </html>

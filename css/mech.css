@@ -8,7 +8,54 @@ html {
     scroll-behavior: smooth;
     font-size: 12px;
 }
+.example {
+    background-color: black;
+    display: flex;
+    height: fit-content;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    /* z-index: 1; */
+    margin-bottom: 25px;
+}
+h2 {
+    color: floralwhite;
+    padding: 0 10px;
+    text-align: center;
+    font-size: 2.0rem;
+}
+.zindex {
+    z-index: 220;
+}
 
+.example>ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.example ul li {
+    list-style: none;
+    padding-top: 7px;
+}
+
+.example ul li a {
+    color: white;
+    display: block;
+    padding: 5px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.2s ease-in 0.5ms;
+}
+
+.example ul li a:hover {
+    color: black;
+    background-color: white;
+}
+.FRAME_Design{
+    width: 100%;
+    height: 100vh;
+}
 .sidenav {
     height: 92%;
     width: 160px;
