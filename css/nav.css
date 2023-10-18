@@ -140,6 +140,10 @@ html {
     visibility: visible;
     opacity: 1;
 }
+.active{
+    background: white;
+    color: black;
+}
 /* navbar ended */
 footer {
     position: static;

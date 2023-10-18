@@ -50,19 +50,21 @@
             </nav>
         </header>
         <div class="example sticky">
-            <ul id="videos">
-                <li><a href="#">Chapter 1</a></li>
-                <li><a href="#">Chapter 2</a></li>
-                <li><a href="#">Chapter 3</a></li>
-                <li><a href="#">Chapter 4</a></li>
-                <li><a href="">Chapter 5</a></li>
-                <li><a href="">Chapter 6</a></li>
+            <ul>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_Chapter('/Upload/CNC_chapter_1.pdf')">Chapter 1</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_Chapter('/Upload/CNC_chapter_2.pdf')">Chapter 2</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_Chapter('/Upload/CNC_chapter_3.pdf')">Chapter 3</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_Chapter('/Upload/CNC_chapter_4.pdf')">Chapter 4</a></li>
+                <li><a class="ancher-style-1" href="">Chapter 5</a></li>
+                <li><a class="ancher-style-1" href="">Chapter 6</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_Chapter('/Upload/CNC_Syllabus.pdf')">Syllabus</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="show_button()">Miscellaneous</a></li>
             </ul>
         </div>
-        <div class="main-content">
+        <div id="pdf-viewer"></div>
+        <div class="main-content hide">
             <div class="btn_group">
                 <button type="button" id="Check_result" class="btn" onclick="read_file('5th sem.xlsx')">Check Result</button>
-                <button type="button" id="Asm" class="btn" onclick="open_file('CNC_Syllabus.pdf')">Syllabus</button>
                 <ul class="prev_papers">
                     <li><a href="/Upload/CNC Prev Paper 1.pdf" target="_blank">CNC Paper 1</a></li>
                     <li><a href="/Upload/CNC Prev Paper 2.pdf" target="_blank">CNC Paper 2</a></li>
@@ -97,6 +99,7 @@
         </div>
     </footer>
 </body>
+<script type="text/javascript" src="/build/pdf.js"></script>
 <script type="text/javascript" src="/js/content.js"></script>
 <script type="text/javascript" src="/js/mech.js"></script>
 

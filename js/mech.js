@@ -1,6 +1,5 @@
-
 function read_file(input) {
-    const input_file = "/Upload/"+input;
+    const input_file = "/Upload/" + input;
     console.log(input_file)
     fetch(input_file).then((res) => res.blob()).then(blob => readXlsxFile(blob)).then((rows) => read_data(rows));
     document.querySelector(".popup").style.display = "block";
@@ -8,16 +7,8 @@ function read_file(input) {
     init();
     // document.getElementById("cal").classList.remove("hide")
 }
-function open_chapter(input) {
-    console.log("hello")
-    const input_file = "/Upload/"+input;
-    console.log(input_file)
-    var iframe = document.getElementsByClassName("FRAME_Design")
-    iframe.src=input_file;
-    // window.parent.location=document.referrer;
-    // iframe.src = iframe.src;
-}
-function PrevPaper(ev){
+
+function PrevPaper(ev) {
     ev.target.classList.add("clicked");
     document.getElementById("Asm").classList.add("hide");
     document.getElementById("Check_result").classList.add("hide");
@@ -25,28 +16,28 @@ function PrevPaper(ev){
 
 }
 
-document.querySelector("#close").addEventListener("click", function(){
+document.querySelector("#close").addEventListener("click", function () {
     document.querySelector(".popup").style.display = "none";
 });
 
 function open_file(input) {
     console.log(input)
-    const input_file = "/Upload/"+input;
-    window.open(input_file,'_blank')
+    const input_file = "/Upload/" + input;
+    window.open(input_file, '_blank')
 }
 
-function init(){
-    document.getElementById("number").value="";
+function init() {
+    document.getElementById("number").value = "";
 }
 
-function delete_table(){
+function delete_table() {
     const tbl = document.getElementById("table");
     tr1 = tbl.children[0].children[0];
     tr2 = tbl.children[0].children[1];
-    while (tr1.hasChildNodes()){
+    while (tr1.hasChildNodes()) {
         tr1.removeChild(tr1.firstChild);
     }
-    while (tr2.hasChildNodes()){
+    while (tr2.hasChildNodes()) {
         tr2.removeChild(tr2.firstChild);
     }
     if (tbl.previousElementSibling.classList.contains("hide")) {
@@ -108,7 +99,76 @@ function create_table(value) {
         }
     }
 }
-
+let pdfDoc = null,
+    pageNum = 1,
+    pageisRendering = false,
+    pageNumIsPending = null;
+const scale = 1;
+function renderPage(num, canvas) {
+    pdfDoc.getPage(num).then(page => {
+        const viewport = page.getViewport({ scale });
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+        const renderCtx = {
+            canvasContext: canvas.getContext('2d'),
+            viewport
+        }
+        page.render(renderCtx);
+    });
+}
+function Open_Chapter(url) {
+    deleteChild();
+    pdfjsLib.getDocument(url).promise.then(pdfDoc_ => {
+        pdfDoc = pdfDoc_;
+        const viewer = document.getElementById('pdf-viewer');
+        for (page = 1; page <= pdfDoc_.numPages; page++) {
+            canvas = document.createElement("canvas");
+            canvas.className = 'pdf-page-canvas';
+            viewer.appendChild(canvas);
+            renderPage(page, canvas);
+        }
+        // document.querySelector('#page-count').textContent = pdfDoc.numPages;
+        // renderPage(pageNum);
+    }).catch(err => {
+        const div = document.createElement('div');
+        div.className = 'error';
+        div.appendChild(document.createTextNode(err.message));
+        document.querySelector('body').insertBefore(div, canvas);
+        document.querySelector('.top-bar').style.display = 'none';
+    })
+}
+function deleteChild(){
+    const main_content = document.getElementsByClassName("main-content")[0];
+    if(main_content.classList.contains("hide")){
+        main_content.classList.remove("hide")
+    }
+    main_content.classList.add('hide');
+    let div = document.getElementById("pdf-viewer");
+    let first = div.firstElementChild;
+    while(first) {
+        first.remove();
+        first = div.firstElementChild;
+    }
+}
+function show_button(){
+    deleteChild();
+    const main_content = document.getElementsByClassName("main-content")[0];
+    console.log('yes')
+    if(main_content.classList.contains("hide")){
+        main_content.classList.remove("hide")
+    }
+}
+const anchor_all = document.querySelectorAll('div.example ul li>a');
+anchor_all.forEach((anchor)=>{
+    anchor.addEventListener('click',()=>{
+        anchor_all.forEach((anchor)=>{
+            if(anchor.classList.contains("active")){
+                anchor.classList.remove("active");
+            }
+        });
+        anchor.classList.add("active");
+    })
+})
 let obj
 function read_data(data) {
     obj = data;
