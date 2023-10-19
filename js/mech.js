@@ -21,7 +21,6 @@ document.querySelector("#close").addEventListener("click", function () {
 });
 
 function open_file(input) {
-    console.log(input)
     const input_file = "/Upload/" + input;
     window.open(input_file, '_blank')
 }
@@ -63,7 +62,6 @@ function create_table(value) {
     const tbl = document.getElementById("table");
     const pr = tbl.previousElementSibling;
     if (value.length == 12) {
-        // console.log(obj.length)
         for (i = 2; i < obj.length; i++) {
             if (obj[i][2] == value) {
                 console.log(obj[i][2])
@@ -117,6 +115,8 @@ function renderPage(num, canvas) {
     });
 }
 function Open_Chapter(url) {
+    document.getElementById("loader").style.display='block';
+    document.getElementById("pdf-viewer").style.display='none';
     deleteChild();
     pdfjsLib.getDocument(url).promise.then(pdfDoc_ => {
         pdfDoc = pdfDoc_;
@@ -127,8 +127,12 @@ function Open_Chapter(url) {
             viewer.appendChild(canvas);
             renderPage(page, canvas);
         }
-        // document.querySelector('#page-count').textContent = pdfDoc.numPages;
-        // renderPage(pageNum);
+        setTimeout(showpage,1000);
+        function showpage(){
+            document.getElementById("loader").style.display='none';
+            document.getElementById("pdf-viewer").style.display='block';
+            document.getElementsByTagName("footer")[0].style.display='block';
+        }
     }).catch(err => {
         const div = document.createElement('div');
         div.className = 'error';
@@ -172,5 +176,4 @@ anchor_all.forEach((anchor)=>{
 let obj
 function read_data(data) {
     obj = data;
-    // console.log(obj)
 }
