@@ -1,11 +1,51 @@
-.container{
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.main_body {
+    display: none;
+}
+
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
 }
-.container p{
+
+.container p {
     margin: 50px auto auto auto;
     text-align: center;
     color: white;
@@ -14,7 +54,8 @@
     padding: 10px 0;
     font-size: 2.9rem;
 }
-.container::before{
+
+.container::before {
     content: '';
     background: url(../images/complex-technology-gear-wallpaper-preview.jpg) no-repeat center center/cover;
     position: absolute;
@@ -24,7 +65,8 @@
     z-index: -1;
     opacity: 0.59;
 }
-.main_container{
+
+.main_container {
     display: flex;
     justify-content: space-around;
     height: max-content;
@@ -32,7 +74,8 @@
     flex-wrap: wrap;
     margin: 20px;
 }
-.main_container>p{
+
+.main_container>p {
     display: block;
     width: 100%;
     font-size: 2.7rem;
@@ -40,7 +83,7 @@
     text-align: center;
 }
 
-.box-size{
+.box-size {
     border: 2px solid #a430308c;
     border-radius: 30px;
     width: 350px;
@@ -55,14 +98,13 @@
     margin: inherit;
 }
 
-.image-style{
+.image-style {
     width: 80%;
     padding: 15px;
     border-radius: 30px;
 }
 
-.ancher-style-2{
+.ancher-style-2 {
     color: white;
     font-size: 2.5rem;
 }
-
