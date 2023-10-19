@@ -333,4 +333,7 @@ div#pdf-viewer > *:first-child{
         display: block;
         width: 100vw;
     }
+    #loader {
+        top: 90%;
+    }    
 }
