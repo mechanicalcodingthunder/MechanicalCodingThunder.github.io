@@ -115,7 +115,7 @@ function renderPage(num, canvas) {
     });
 }
 function Open_Chapter(url) {
-    document.getElementById("loader").style.display='block';
+    document.getElementById("loader").style.display='flex';
     document.getElementById("pdf-viewer").style.display='none';
     deleteChild();
     pdfjsLib.getDocument(url).promise.then(pdfDoc_ => {

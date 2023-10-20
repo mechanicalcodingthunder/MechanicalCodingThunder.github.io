@@ -23,4 +23,11 @@
     .ancher-style-2{
         font-size: 1.6rem;;
     }
+    .ring{
+        width: 100px;
+        height: 100px;
+    }
+    .load-text{
+        font-size: 10px;
+    }
 }
