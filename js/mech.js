@@ -5,7 +5,6 @@ function read_file(input) {
     document.querySelector(".popup").style.display = "block";
     delete_table();
     init();
-    // document.getElementById("cal").classList.remove("hide")
 }
 
 function PrevPaper(ev) {

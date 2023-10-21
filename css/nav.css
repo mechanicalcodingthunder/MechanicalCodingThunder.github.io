@@ -156,25 +156,10 @@ footer {
     color: white;
 }
 
-@media only screen and (max-width: 590px) {
-    #navbar {
-        flex-direction: column;
-    }
-
-/*     #navbar>ul>li.sub-menu>ul {
-        top: 100px;
-    } */
-}
-
-@media only screen and (max-width: 410px) {
+@media only screen and (max-width: 409px) {
     #navbar ul {
         flex-direction: column;
     }
-/* 
-    #navbar>ul>li.sub-menu>ul {
-        top: auto;
-        left: 130px;
-    } */
     #navbar>ul>li.sub-menu>ul li a{
         font-size: 1.5rem;
     }
