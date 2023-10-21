@@ -1,4 +1,4 @@
-@media only screen and (max-width: 640px){
+@media only screen and (max-width: 678px){
     .container::before{
         top: 100px;
     }
