@@ -127,12 +127,8 @@ function Open_Chapter(url) {
             viewer.appendChild(canvas);
             renderPage(page, canvas);
         }
-        setTimeout(showpage,1000);
-        function showpage(){
-            document.getElementById("loader").style.display='none';
-            document.getElementById("pdf-viewer").style.display='block';
-            document.getElementsByTagName("footer")[0].style.display='block';
-        }
+        // setTimeout(showpage,1000);
+        showpage();
     }).catch(err => {
         const div = document.createElement('div');
         div.className = 'error';
@@ -141,6 +137,13 @@ function Open_Chapter(url) {
         document.querySelector('.top-bar').style.display = 'none';
     })
 }
+
+function showpage(){
+    document.getElementById("loader").style.display='none';
+    document.getElementById("pdf-viewer").style.display='block';
+    document.getElementsByTagName("footer")[0].style.display='block';
+}
+
 function deleteChild(){
     const main_content = document.getElementsByClassName("main-content")[0];
     if(main_content.classList.contains("hide")){
