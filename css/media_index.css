@@ -1,9 +1,9 @@
-@media only screen and (max-width: 640px){
+@media only screen and (max-width: 678px){
     .container::before{
         top: 100px;
     }
 }
-@media only screen and (max-width: 410px){
+@media only screen and (max-width: 409px){
    
     .container p{
         width: 200px;
@@ -22,5 +22,12 @@
     }
     .ancher-style-2{
         font-size: 1.6rem;;
+    }
+    .ring{
+        width: 100px;
+        height: 100px;
+    }
+    .load-text{
+        font-size: 10px;
     }
 }

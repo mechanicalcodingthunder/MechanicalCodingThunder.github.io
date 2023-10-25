@@ -144,7 +144,62 @@ label {
     border: 2px solid red;
     border-radius: 10px;
 }
+#loader {
+    display: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.ring{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: ring 2s linear infinite;
+}
+@keyframes ring{
+    0%{
+        transform: rotate(0deg);
+        box-shadow: 1px 5px 2px #e65c00;
+    }
+    50%{
+        transform: rotate(180deg);
+        box-shadow: 1px 5px 2px #18b201;
+    }
+    100%{
+        transform: rotate(360deg);
+        box-shadow: 1px 5px 2px #0456c8;
+    }
+}
+.ring::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+.load-text{
+    color: #737373;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 200px;
+    animation: text 2s ease-in-out infinite;
+}
+@keyframes text {
+    50%{
+        color: black;
+    }
+    
+}
 
+#pdf-viewer {
+    display: block;
+}
 .btn {
     margin: 5px 0 5px 0;
     border: 2px solid rgb(255, 81, 0);
@@ -295,4 +350,11 @@ div#pdf-viewer > *:first-child{
         display: block;
         width: 100vw;
     }
+    .ring{
+        width: 100px;
+        height: 100px;
+    }
+    .load-text{
+        font-size: 10px;
+    }    
 }

@@ -5,7 +5,6 @@ function read_file(input) {
     document.querySelector(".popup").style.display = "block";
     delete_table();
     init();
-    // document.getElementById("cal").classList.remove("hide")
 }
 
 function PrevPaper(ev) {
@@ -21,7 +20,6 @@ document.querySelector("#close").addEventListener("click", function () {
 });
 
 function open_file(input) {
-    console.log(input)
     const input_file = "/Upload/" + input;
     window.open(input_file, '_blank')
 }
@@ -63,7 +61,6 @@ function create_table(value) {
     const tbl = document.getElementById("table");
     const pr = tbl.previousElementSibling;
     if (value.length == 12) {
-        // console.log(obj.length)
         for (i = 2; i < obj.length; i++) {
             if (obj[i][2] == value) {
                 console.log(obj[i][2])
@@ -117,6 +114,8 @@ function renderPage(num, canvas) {
     });
 }
 function Open_Chapter(url) {
+    document.getElementById("loader").style.display='flex';
+    document.getElementById("pdf-viewer").style.display='none';
     deleteChild();
     pdfjsLib.getDocument(url).promise.then(pdfDoc_ => {
         pdfDoc = pdfDoc_;
@@ -127,8 +126,8 @@ function Open_Chapter(url) {
             viewer.appendChild(canvas);
             renderPage(page, canvas);
         }
-        // document.querySelector('#page-count').textContent = pdfDoc.numPages;
-        // renderPage(pageNum);
+        // setTimeout(showpage,1000);
+        showpage();
     }).catch(err => {
         const div = document.createElement('div');
         div.className = 'error';
@@ -137,6 +136,13 @@ function Open_Chapter(url) {
         document.querySelector('.top-bar').style.display = 'none';
     })
 }
+
+function showpage(){
+    document.getElementById("loader").style.display='none';
+    document.getElementById("pdf-viewer").style.display='block';
+    document.getElementsByTagName("footer")[0].style.display='block';
+}
+
 function deleteChild(){
     const main_content = document.getElementsByClassName("main-content")[0];
     if(main_content.classList.contains("hide")){
@@ -172,5 +178,4 @@ anchor_all.forEach((anchor)=>{
 let obj
 function read_data(data) {
     obj = data;
-    // console.log(obj)
 }
