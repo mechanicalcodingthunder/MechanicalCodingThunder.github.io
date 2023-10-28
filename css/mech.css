@@ -274,7 +274,23 @@ td {
 .prev_papers li:hover{
     background: red;
 }
-
+#GIF{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    flex-wrap: wrap;
+    width: 650px;
+}
+#GIF img{
+    width: inherit;
+}
+#GIF p{
+    color: white;
+    font-size: 2.0em;
+    font-weight: 600;
+    margin-top: 10px;
+}
 .table_container {
     height: 80px;
     width: 100%;
@@ -315,16 +331,6 @@ footer {
     margin: 5px auto;
 }
 @media only screen and (max-width: 680px) {
-    .sidenav {
-        position: static;
-        height: auto;
-        width: 100vw;
-        top: 50px;
-        left: 0;
-        background-color: #111;
-        padding-top: 0px;
-        top: 100px;
-    }
 
     .main-content {
         width: 100vw;
@@ -340,6 +346,9 @@ footer {
     .pdf-page-canvas{
         display: block;
         width: 100vw;
+    }
+    #GIF{
+        width: 100%;
     }
 }
 
@@ -363,4 +372,5 @@ footer {
     .load-text{
         font-size: 10px;
     }    
+   
 }

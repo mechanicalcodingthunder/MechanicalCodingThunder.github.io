@@ -113,6 +113,7 @@ function renderPage(num, canvas) {
 function Open_Chapter(url) {
     document.getElementById("loader").style.display='flex';
     document.getElementById("pdf-viewer").style.display='none';
+    document.getElementById("GIF").style.display='none';
     const btn = document.getElementById("download")
     btn.value = url;
     if (btn.classList.contains("hide")){
@@ -161,8 +162,8 @@ function deleteChild(){
 }
 function show_button(){
     deleteChild();
+    document.getElementById("GIF").style.display='none';
     const main_content = document.getElementsByClassName("main-content")[0];
-    console.log('yes')
     if(main_content.classList.contains("hide")){
         main_content.classList.remove("hide")
     }
