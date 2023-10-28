@@ -7,20 +7,17 @@ function read_file(input) {
     init();
 }
 
-function PrevPaper(ev) {
-    ev.target.classList.add("clicked");
-    document.getElementById("Asm").classList.add("hide");
-    document.getElementById("Check_result").classList.add("hide");
-    document.querySelector(".prev_papers").classList.remove("hide");
-
-}
-
 document.querySelector("#close").addEventListener("click", function () {
     document.querySelector(".popup").style.display = "none";
 });
 
 function open_file(input) {
-    const input_file = "/Upload/" + input;
+    let input_file;
+    if (input.includes("Upload")){
+        input_file = input;
+    }else{
+        input_file = "/Upload/" + input;
+    }
     window.open(input_file, '_blank')
 }
 
@@ -116,6 +113,12 @@ function renderPage(num, canvas) {
 function Open_Chapter(url) {
     document.getElementById("loader").style.display='flex';
     document.getElementById("pdf-viewer").style.display='none';
+    const btn = document.getElementById("download")
+    btn.value = url;
+    if (btn.classList.contains("hide")){
+        btn.classList.remove("hide");
+    }
+    btn.classList.add("hide");
     deleteChild();
     pdfjsLib.getDocument(url).promise.then(pdfDoc_ => {
         pdfDoc = pdfDoc_;
@@ -126,8 +129,14 @@ function Open_Chapter(url) {
             viewer.appendChild(canvas);
             renderPage(page, canvas);
         }
-        // setTimeout(showpage,1000);
         showpage();
+        function showpage(){
+            document.getElementById("loader").style.display='none';
+            document.getElementById("pdf-viewer").style.display='block';
+            document.getElementsByTagName("footer")[0].style.display='block';
+        }
+        btn.classList.remove("hide");
+
     }).catch(err => {
         const div = document.createElement('div');
         div.className = 'error';
@@ -137,11 +146,7 @@ function Open_Chapter(url) {
     })
 }
 
-function showpage(){
-    document.getElementById("loader").style.display='none';
-    document.getElementById("pdf-viewer").style.display='block';
-    document.getElementsByTagName("footer")[0].style.display='block';
-}
+
 
 function deleteChild(){
     const main_content = document.getElementsByClassName("main-content")[0];
@@ -150,10 +155,8 @@ function deleteChild(){
     }
     main_content.classList.add('hide');
     let div = document.getElementById("pdf-viewer");
-    let first = div.firstElementChild;
-    while(first) {
-        first.remove();
-        first = div.firstElementChild;
+    while(div.childElementCount>1) {
+        div.removeChild(div.lastChild);
     }
 }
 function show_button(){

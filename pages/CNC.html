@@ -50,22 +50,26 @@
                 <li><a class="ancher-style-1" href="">Chapter 5</a></li>
                 <li><a class="ancher-style-1" href="">Chapter 6</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_Chapter('/Upload/CNC_Syllabus.pdf')">Syllabus</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_Chapter('/Upload/CNC Practical Manual.pdf')">CNC Lab Manual</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="show_button()">Miscellaneous</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_Chapter('/Upload/CNC Practical Manual.pdf')">Lab Manual</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_Chapter('/Upload/CNC Prev Paper 1.pdf')">Paper 1</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_Chapter('/Upload/CNC Prev Paper 2.pdf')">Paper 2</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_Chapter('/Upload/CNC_Assignment_1.pdf')">A1</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_Chapter('/Upload/CNC_Assignment_2.pdf')">A 2</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)">A 3</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="show_button()">Result</a></li>
             </ul>
         </div>
         <div id="loader">
             <div class="ring"></div>
             <span class="load-text">Loading..</span>
         </div>
-        <div id="pdf-viewer"></div>
+        <div id="pdf-viewer">
+            <button id="download" class="btn hide" value="" onclick="open_file(value)"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#403995" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"/></svg></button>
+        </div>
+
         <div class="main-content hide">
             <div class="btn_group">
                 <button type="button" id="Check_result" class="btn" onclick="read_file('5th sem.xlsx')">Check Result</button>
-                <ul class="prev_papers">
-                    <li><a href="/Upload/CNC Prev Paper 1.pdf" target="_blank">CNC Paper 1</a></li>
-                    <li><a href="/Upload/CNC Prev Paper 2.pdf" target="_blank">CNC Paper 2</a></li>
-                </ul>
             </div>
             <div class="popup">
                 <button id="close">&times;</button>
