@@ -10,5 +10,6 @@ function showpage(){
 
 document.querySelector("#close").addEventListener("click", function () {
     document.querySelector(".popup").style.visibility = "hidden";
-    document.querySelector(".popup_screen").style.zIndex = "-10";
+    document.querySelector(".popup_screen").style.zIndex = "-100";
+    document.querySelector(".popup_screen").style.visibility = "hidden";
 });
