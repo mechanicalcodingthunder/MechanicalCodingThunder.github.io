@@ -1,5 +1,5 @@
 function read_file(input) {
-    const input_file = "/Upload/" + input;
+    const input_file = "/static/Upload/" + input;
     console.log(input_file)
     fetch(input_file).then((res) => res.blob()).then(blob => readXlsxFile(blob)).then((rows) => read_data(rows));
     document.querySelector(".popup").style.display = "block";
@@ -16,7 +16,7 @@ function open_file(input) {
     if (input.includes("Upload")){
         input_file = input;
     }else{
-        input_file = "/Upload/" + input;
+        input_file = "/static/Upload/" + input;
     }
     window.open(input_file, '_blank')
 }
