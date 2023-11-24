@@ -171,6 +171,9 @@ function show_button(){
     if(main_content.classList.contains("hide")){
         main_content.classList.remove("hide")
     }
+    if(document.getElementById("download").contains("hide")){
+        document.getElementById("download").classList.remove("hide")
+    }
 }
 const anchor_all = document.querySelectorAll('div.example ul li>a');
 anchor_all.forEach((anchor)=>{
