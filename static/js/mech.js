@@ -171,8 +171,7 @@ function show_button(){
     if(main_content.classList.contains("hide")){
         main_content.classList.remove("hide")
     }
-    if(document.getElementById("download").classList.contains("hide")){
-        document.getElementById("download").classList.remove("hide")
+    if(!document.getElementById("download").classList.contains("hide")){
         document.getElementById("download").classList.add("hide")
     }
 }
