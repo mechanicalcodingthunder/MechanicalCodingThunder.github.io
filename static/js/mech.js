@@ -121,7 +121,6 @@ function Open_Chapter(url) {
     if (btn.classList.contains("hide")){
         btn.classList.remove("hide");
     }
-    btn.classList.add("hide");
     deleteChild();
     pdfjsLib.getDocument(url).promise.then(pdfDoc_ => {
         pdfDoc = pdfDoc_;
@@ -138,7 +137,6 @@ function Open_Chapter(url) {
             document.getElementById("pdf-viewer").style.display='block';
             document.getElementsByTagName("footer")[0].style.display='block';
         }
-        btn.classList.remove("hide");
 
     }).catch(err => {
         const div = document.createElement('div');
