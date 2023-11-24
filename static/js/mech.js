@@ -173,6 +173,7 @@ function show_button(){
     }
     if(document.getElementById("download").classList.contains("hide")){
         document.getElementById("download").classList.remove("hide")
+        document.getElementById("download").classList.add("hide")
     }
 }
 const anchor_all = document.querySelectorAll('div.example ul li>a');
