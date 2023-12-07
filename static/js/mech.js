@@ -57,31 +57,41 @@ function showresult(evt) {
 function create_table(value) {
     const tbl = document.getElementById("table");
     const pr = tbl.previousElementSibling;
+    col = 12;
     if (value.length == 12) {
         for (i = 2; i < obj.length; i++) {
             if (obj[i][2] == value) {
-                console.log(obj[i][2])
                 const tr = tbl.children[0].children[0];
                 if (tbl.classList.contains("hide")) {
                     tbl.classList.remove("hide");
                     pr.classList.add("hide");
                 }
                 if (tr.childElementCount == 0) {
-                    for (ii = 1; ii < obj[1].length; ii++) {
+                    for (ii = 1; ii < col; ii++) {
                         let th1 = document.createElement("th");
                         th1.textContent = obj[1][ii];
                         tr.appendChild(th1);
                     }
                 }
                 const tr1 = tbl.children[0].children[1];
-                for (j = 1; j < obj[i].length; j++) {
+                for (j = 1; j < col; j++) {
                     if (tr1.childElementCount == 0 || tr1.childElementCount < tr.childElementCount) {
                         let td1 = document.createElement("td");
-                        td1.textContent = obj[i][j];
+                        if (j==9){
+                            td1.textContent = obj[i][j].toFixed(2);
+                        }
+                        else{
+                            td1.textContent = obj[i][j];
+                        }
                         tr1.appendChild(td1);
                     } else {
                         let td1 = tbl.children[0].children[1].children[j - 1];
-                        td1.textContent = obj[i][j];
+                        if (j==9){
+                            td1.textContent = obj[i][j].toFixed(2);
+                        }
+                        else{
+                            td1.textContent = obj[i][j];
+                        }
                     }
                 }
                 break;
