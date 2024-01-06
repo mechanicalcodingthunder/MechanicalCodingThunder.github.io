@@ -14,8 +14,10 @@ document.querySelector("#close").addEventListener("click", function () {
     document.querySelector(".popup_screen").style.visibility = "hidden";
 });
 document.addEventListener("click",function (evt) { 
-    console.log(evt.target)
-        // hide_resource();
+    const el = document.getElementsByClassName("mechanical")[0];
+    if (evt.target !== el){
+        hide_resource();
+    }
     //Hide the menus if visible
 }); 
 function display_resource(){
