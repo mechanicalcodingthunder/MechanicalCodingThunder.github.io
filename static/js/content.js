@@ -14,7 +14,7 @@ document.querySelector("#close").addEventListener("click", function () {
     document.querySelector(".popup_screen").style.visibility = "hidden";
 });
 document.addEventListener("click",function (evt) { 
-    console(evt.target)
+    console.log(evt.target)
         // hide_resource();
     //Hide the menus if visible
 }); 
