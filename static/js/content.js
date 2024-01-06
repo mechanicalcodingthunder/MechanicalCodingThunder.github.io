@@ -13,7 +13,7 @@ document.querySelector("#close").addEventListener("click", function () {
     document.querySelector(".popup_screen").style.zIndex = "-100";
     document.querySelector(".popup_screen").style.visibility = "hidden";
 });
-$(window).click(function () { 
+document.addEventListener("click",function () { 
     hide_resource();
     //Hide the menus if visible
 }); 
