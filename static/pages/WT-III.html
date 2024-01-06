@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanical Coding Thunder</title>
+    <link rel="icon" type="image/png" href="/static/images/favicon.png">
+    <link rel="stylesheet" href="/static/css/nav.css">
+    <link rel="stylesheet" href="/static/css/mech.css">
+    <script src="/static/js/read-excel-file.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <div class="main_body">
+        <header>
+            <nav id="navbar" class="stick_top">
+                <div>
+                    <a class="logo ancher-style" href="/">Mechanical Coding Thunder</a>
+                </div>
+                <ul>
+                    <li><a class="ancher-style" href="/">Home</a></li>
+                    <li class="sub-menu">
+                        <a class="ancher-style" href="#">Resources<span class="carret"></span></a>
+                        <ul id="dropdown">
+                            <li class="mech-drop"><a class="ancher-style" href="#">Mechanical<span class="carret"></span></a>
+                            <ul>
+                                <li><a class="ancher-style" href="/static/pages/WT-I.html">WT-I</li>
+                                <li><a class="ancher-style" href="/static/pages/WT-III.html">WT-III</li>
+                                <li><a class="ancher-style" href="/static/pages/CNC.html">CNC</li>
+                                <li><a class="ancher-style" href="/static/pages/EDM.html">EDM</li>
+                            </ul>
+                        </li>
+                            <li><a class="ancher-style" href="/static/pages/cht_course.html">Coding</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="ancher-style" href="#">Services</a></li>
+                    <li><a class="ancher-style" href="/static/pages/about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="example sticky">
+            <ul>
+                <li><a class="ancher-style-1" href="javascript:void(0)">Chapter 1</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)">Chapter 2</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)">Chapter 3</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)">Chapter 4</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)">Chapter 5</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)">Chapter 6</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)">Chapter 7</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_Chapter('/static/Upload/Ch_8 cutting fluid.pdf')">Chapter 8</a></li>
+                <!-- <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_Chapter('/static/Upload/CNC_Syllabus.pdf')">Syllabus</a></li> -->
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_Chapter('/static/Upload/WT-I Prev Paper 1.pdf')">Paper 1</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_Chapter('/static/Upload/WT-I Prev Paper 2.pdf')">Paper 2</a></li>
+                <!-- <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_Chapter('/static/Upload/CNC_Assignment_1.pdf')">A1</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_Chapter('/static/Upload/CNC_Assignment_2_solution.pdf')">A 2</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)">A 3</a></li> -->
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="show_button()">Result</a></li>
+            </ul>
+        </div>
+        <div id="loader">
+            <div class="ring"></div>
+            <span class="load-text">Loading..</span>
+        </div>
+        <div id="pdf-viewer">
+            <button id="download" class="btn hide" value="" onclick="open_file(value)"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#403995" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"/></svg></button>
+        </div>
+        <div class="main-content hide">
+            <div class="btn_group">
+                <button type="button" id="Check_result" class="btn" onclick="read_file('4th sem.xlsx')">Check Result</button>
+            </div>
+            <div class="popup">
+                <button id="close">&times;</button>
+                <div class="cal" id="cal">
+                    <label for="number">Enter your Roll No</label>
+                    <input inputmode="numeric" pattern="[0-9]*" type="text" onkeypress="return onlyNumberkey(event)" maxlength="12" id="number"
+                        name="number">
+                    <button type="button" id="show_result" class="btn" onclick="showresult(event)">Show Result</button>
+                    <p class="result hide" id="result">Hhh</p>
+                    <div class="table_container">
+                        <p class="">No result available</p>
+                        <table id="table" class="hide">
+                            <thead>
+                                <tr>
+                                </tr>
+                                <tr>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer style="display: block;">
+        <div class="center">
+            Copyright 2023 Mechanical Coding Thunder
+        </div>
+    </footer>
+</body>
+<script type="text/javascript" src="/static/build/pdf.js"></script>
+<script type="text/javascript" src="/static/js/mech.js"></script>
+</html>
