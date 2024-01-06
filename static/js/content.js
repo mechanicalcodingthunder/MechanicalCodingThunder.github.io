@@ -15,10 +15,9 @@ document.querySelector("#close").addEventListener("click", function () {
 });
 document.addEventListener("click",function (evt) { 
     const el = document.getElementsByClassName("mechanical")[0];
-    console.log(el,evt.target)
-    if (el.contains(evt.target)){
-        console.log("Hello")
-        // hide_resource();
+    // console.log(el,evt.target)
+    if (!el.contains(evt.target)){
+        hide_resource();
     }
     //Hide the menus if visible
 }); 
