@@ -122,10 +122,10 @@ html {
     background: deeppink;
     border-radius: 10px;
     position: absolute;
-    padding: 3px;
+    padding: 2px;
     top: 5px;
     left: 152px;
-    width: 100px;
+    width: 103px;
     transition: 0.3s ease-in-out;
 }
 #navbar ul li.sub-menu ul#dropdown li.mech-drop ul li a{
