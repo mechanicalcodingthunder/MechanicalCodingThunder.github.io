@@ -16,7 +16,8 @@ document.querySelector("#close").addEventListener("click", function () {
 document.addEventListener("click",function (evt) { 
     const el = document.getElementsByClassName("mechanical")[0];
     if (evt.target !== el){
-        hide_resource();
+        console.log("Hello")
+        // hide_resource();
     }
     //Hide the menus if visible
 }); 
