@@ -112,6 +112,10 @@ html {
     list-style: none;
 }
 
+.active_hover{
+    visibility: visible;
+    opacity: 1;
+}
 
 #navbar ul li.sub-menu ul#dropdown li.mech-drop ul{
     display: flex;
@@ -128,6 +132,11 @@ html {
     width: 103px;
     transition: 0.3s ease-in-out;
 }
+.active_hover{
+    visibility: visible;
+    opacity: 1;
+    background-color: red;
+}
 #navbar ul li.sub-menu ul#dropdown li.mech-drop ul li a{
     font-weight: 600;
     color: black;
@@ -136,10 +145,12 @@ html {
     visibility: visible;
     opacity: 1;
 }
+
 #navbar ul li.sub-menu ul#dropdown li.mech-drop:hover>ul{
     visibility: visible;
     opacity: 1;
 }
+
 .active{
     background: white;
     color: black;
