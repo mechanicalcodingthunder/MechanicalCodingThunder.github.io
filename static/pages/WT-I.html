@@ -26,14 +26,15 @@
                     <li class="sub-menu">
                         <a class="ancher-style" href="#">Resources<span class="carret"></span></a>
                         <ul id="dropdown">
-                            <li class="mech-drop"><a class="ancher-style" href="#">Mechanical<span class="carret"></span></a>
-                            <ul>
-                                <li><a class="ancher-style" href="/static/pages/WT-I.html">WT-I</li>
-                                <li><a class="ancher-style" href="/static/pages/WT-III.html">WT-III</li>
-                                <li><a class="ancher-style" href="/static/pages/CNC.html">CNC</li>
-                                <li><a class="ancher-style" href="/static/pages/EDM.html">EDM</li>
-                            </ul>
-                        </li>
+                            <li class="mech-drop"><a class="ancher-style" href="#">Mechanical<span
+                                        class="carret"></span></a>
+                                <ul>
+                                    <li><a class="ancher-style" href="/static/pages/WT-I.html">WT-I</li>
+                                    <li><a class="ancher-style" href="/static/pages/WT-III.html">WT-III</li>
+                                    <li><a class="ancher-style" href="/static/pages/CNC.html">CNC</li>
+                                    <li><a class="ancher-style" href="/static/pages/EDM.html">EDM</li>
+                                </ul>
+                            </li>
                             <li><a class="ancher-style" href="/static/pages/cht_course.html">Coding</a></li>
                         </ul>
                     </li>
@@ -51,10 +52,14 @@
                 <li><a class="ancher-style-1" href="javascript:void(0)">Chapter 5</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)">Chapter 6</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)">Chapter 7</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_Chapter('/static/Upload/Ch_8 cutting fluid.pdf')">Chapter 8</a></li>
-                <!-- <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_Chapter('/static/Upload/CNC_Syllabus.pdf')">Syllabus</a></li> -->
-                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_Chapter('/static/Upload/WT-I Prev Paper 1.pdf')">Paper 1</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_Chapter('/static/Upload/WT-I Prev Paper 2.pdf')">Paper 2</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)"
+                        onclick="Open_Chapter('/static/Upload/Ch_8 cutting fluid.pdf')">Chapter 8</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)"
+                        onclick="Open_Chapter('/static/Upload/WT-I_Syllabus.pdf')">Syllabus</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)"
+                        onclick="Open_Chapter('/static/Upload/WT-I Prev Paper 1.pdf')">Paper 1</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)"
+                        onclick="Open_Chapter('/static/Upload/WT-I Prev Paper 2.pdf')">Paper 2</a></li>
                 <!-- <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_Chapter('/static/Upload/CNC_Assignment_1.pdf')">A1</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_Chapter('/static/Upload/CNC_Assignment_2_solution.pdf')">A 2</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)">A 3</a></li> -->
@@ -66,18 +71,23 @@
             <span class="load-text">Loading..</span>
         </div>
         <div id="pdf-viewer">
-            <button id="download" class="btn hide" value="" onclick="open_file(value)"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#403995" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"/></svg></button>
+            <button id="download" class="btn hide" value="" onclick="open_file(value)"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                    stroke="#403995" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5" />
+                </svg></button>
         </div>
         <div class="main-content hide">
             <div class="btn_group">
-                <button type="button" id="Check_result" class="btn" onclick="read_file('2nd sem.xlsx')">Check Result</button>
+                <button type="button" id="Check_result" class="btn" onclick="read_file('2nd sem.xlsx')">Check
+                    Result</button>
             </div>
             <div class="popup">
                 <button id="close">&times;</button>
                 <div class="cal" id="cal">
                     <label for="number">Enter your Roll No</label>
-                    <input inputmode="numeric" pattern="[0-9]*" type="text" onkeypress="return onlyNumberkey(event)" maxlength="12" id="number"
-                        name="number">
+                    <input inputmode="numeric" pattern="[0-9]*" type="text" onkeypress="return onlyNumberkey(event)"
+                        maxlength="12" id="number" name="number">
                     <button type="button" id="show_result" class="btn" onclick="showresult(event)">Show Result</button>
                     <p class="result hide" id="result">Hhh</p>
                     <div class="table_container">
@@ -103,4 +113,5 @@
 </body>
 <script type="text/javascript" src="/static/build/pdf.js"></script>
 <script type="text/javascript" src="/static/js/mech.js"></script>
+
 </html>
