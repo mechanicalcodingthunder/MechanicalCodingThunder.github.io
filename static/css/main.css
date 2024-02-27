@@ -90,7 +90,7 @@
     height: max-content;
     align-items: center;
     flex-wrap: wrap;
-    margin: 20px;
+    margin: 50px;
 }
 
 .main_container>p {
@@ -100,31 +100,12 @@
     font-weight: 600;
     text-align: center;
 }
-
-.box-size {
-    border: 2px solid #a430308c;
-    border-radius: 30px;
-    width: 350px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    font-size: 35px;
-    background-color: #a430308c;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: inherit;
-}
-
-.image-style {
-    width: 80%;
-    padding: 15px;
-    border-radius: 30px;
-}
-
-.ancher-style-2 {
-    color: white;
-    font-size: 2.5rem;
+img{
+    width: 550px;
+    height: 350px;
+    box-shadow: 3px 3px 6px #333;
+    border-radius: 10px;
+    transition: ease-in-out 2s;
 }
 .popup_screen{
     z-index: 999999;
