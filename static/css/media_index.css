@@ -24,8 +24,8 @@
     .container::before{
         top: 250px;
     }
-    .box-size{
-        width: 200px;
+    img{
+        width: 250px;
         height: 170px;
     }
     .main_container>p{

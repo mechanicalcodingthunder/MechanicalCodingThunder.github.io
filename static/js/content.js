@@ -1,5 +1,6 @@
 window.onload = function(){
     setTimeout(showpage,3000);
+    changeimg();
 }
 
 function showpage(){
@@ -7,7 +8,17 @@ function showpage(){
     document.getElementsByClassName("main_body")[0].style.display='block';
     document.getElementsByTagName("footer")[0].style.display='block';
 }
-
+var img = 0;
+var images = ["m1.jpeg","m2.jpeg","m3.jpeg","m4.jpeg"];
+function changeimg(){
+    document.slide.src = "/static/images/"+images[img];
+    if(img<images.length-1){
+        img++;
+    }else{
+        img=0;
+    }
+    setTimeout("changeimg()",5000);
+}
 document.querySelector("#close").addEventListener("click", function () {
     document.querySelector(".popup").style.visibility = "hidden";
     document.querySelector(".popup_screen").style.zIndex = "-100";
