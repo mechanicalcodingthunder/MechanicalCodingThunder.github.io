@@ -77,8 +77,8 @@ function create_table(value) {
                 for (j = 1; j < col; j++) {
                     if (tr1.childElementCount == 0 || tr1.childElementCount < tr.childElementCount) {
                         let td1 = document.createElement("td");
-                        if (j==9){
-                            td1.textContent = obj[i][j].toFixed(2);
+                        if (j==9 && obj[i][j]!=null){
+                                td1.textContent = obj[i][j].toFixed(2);
                         }
                         else{
                             td1.textContent = obj[i][j];
@@ -86,7 +86,7 @@ function create_table(value) {
                         tr1.appendChild(td1);
                     } else {
                         let td1 = tbl.children[0].children[1].children[j - 1];
-                        if (j==9){
+                        if (j==9 && obj[i][j]!=null){
                             td1.textContent = obj[i][j].toFixed(2);
                         }
                         else{
@@ -156,8 +156,6 @@ function Open_Chapter(url) {
         document.querySelector('.top-bar').style.display = 'none';
     })
 }
-
-
 
 function deleteChild(){
     const main_content = document.getElementsByClassName("main-content")[0];
