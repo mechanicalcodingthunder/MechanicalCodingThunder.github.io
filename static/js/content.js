@@ -9,7 +9,7 @@ function showpage(){
     document.getElementsByTagName("footer")[0].style.display='block';
 }
 var img = 0;
-var images = ["m1.jpeg","m2.jpeg","m3.jpeg","m4.jpeg"];
+var images = ["m1.jpeg","m2.jpeg","m3.jpeg","m4.jpeg","m5.jpg","m6.jpg","m7.jpg","m8.jpg"];
 function changeimg(){
     document.slide.src = "/static/images/"+images[img];
     if(img<images.length-1){
