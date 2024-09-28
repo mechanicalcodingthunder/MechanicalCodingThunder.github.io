@@ -47,39 +47,39 @@
         <div class="example sticky">
             <ul>
                 <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_Chapter('/static/Upload/CNC_chapter_1.pdf')">Chapter 1</a></li>
+                        onclick="Open_pdf('/static/Upload/CNC_chapter_1.pdf')">Chapter 1</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_Chapter('/static/Upload/CNC_chapter_2.pdf')">Chapter 2</a></li>
+                        onclick="Open_pdf('/static/Upload/CNC_chapter_2.pdf')">Chapter 2</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_Chapter('/static/Upload/CNC_chapter_3.pdf')">Chapter 3</a></li>
+                        onclick="Open_pdf('/static/Upload/CNC_chapter_3.pdf')">Chapter 3</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_Chapter('/static/Upload/CNC_chapter_4.pdf')">Chapter 4</a></li>
+                        onclick="Open_pdf('/static/Upload/CNC_chapter_4.pdf')">Chapter 4</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_Chapter('/static/Upload/CNC_chapter_5.pdf')">Chapter 5</a></li>
+                        onclick="Open_pdf('/static/Upload/CNC_chapter_5.pdf')">Chapter 5</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_Chapter('/static/Upload/CNC_chapter_6.pdf')">Chapter 6</a></li>
+                        onclick="Open_pdf('/static/Upload/CNC_chapter_6.pdf')">Chapter 6</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_Chapter('/static/Upload/CNC_Syllabus.pdf')">Syllabus</a></li>
+                        onclick="Open_pdf('/static/Upload/CNC_Syllabus.pdf')">Syllabus</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_Chapter('/static/Upload/CNC Practical Manual.pdf')">Lab Manual</a></li>
+                        onclick="Open_pdf('/static/Upload/CNC Practical Manual.pdf')">Lab Manual</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_Chapter('/static/Upload/CNC Exp2.pdf')">Lab Exp 2</a></li>
+                        onclick="Open_pdf('/static/Upload/CNC Exp2.pdf')">Lab Exp 2</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_Chapter('/static/Upload/CNC Exp4.pdf')">Lab Exp 4</a></li>
+                        onclick="Open_pdf('/static/Upload/CNC Exp4.pdf')">Lab Exp 4</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_Chapter('/static/Upload/CNC Prev Paper 1.pdf')">Paper 1</a></li>
+                        onclick="Open_pdf('/static/Upload/CNC Prev Paper 1.pdf')">Paper 1</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_Chapter('/static/Upload/CNC Prev Paper 2.pdf')">Paper 2</a></li>
+                        onclick="Open_pdf('/static/Upload/CNC Prev Paper 2.pdf')">Paper 2</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_Chapter('/static/Upload/CNC Prev Paper 3.pdf')">Paper 3</a></li>
+                        onclick="Open_pdf('/static/Upload/CNC Prev Paper 3.pdf')">Paper 3</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_Chapter('/static/Upload/CNC Prev Paper 4.pdf')">Paper 4</a></li>
+                        onclick="Open_pdf('/static/Upload/CNC Prev Paper 4.pdf')">Paper 4</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_Chapter('/static/Upload/CNC_Assignment_1.pdf')">A1</a></li>
+                        onclick="Open_pdf('/static/Upload/CNC_Assignment_1.pdf')">A1</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_Chapter('/static/Upload/CNC_Assignment_2_solution.pdf')">A 2</a></li>
+                        onclick="Open_pdf('/static/Upload/CNC_Assignment_2_solution.pdf')">A 2</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_Chapter('/static/Upload/CNC_Assignment_3.pdf')">A 3</a></li>
+                        onclick="Open_pdf('/static/Upload/CNC_Assignment_3.pdf')">A 3</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)" onclick="show_button()">Result</a></li>
             </ul>
         </div>
@@ -88,11 +88,12 @@
             <span class="load-text">Loading..</span>
         </div>
         <div id="pdf-viewer">
-            <button id="download" class="btn hide" value="" onclick="open_file(value)"><svg
+            <iframe src="" width="100%"></iframe>
+            <!-- <button id="download" class="btn hide" value="" onclick="open_file(value)"><svg
                     xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
                     stroke="#403995" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5" />
-                </svg></button>
+                </svg></button> -->
         </div>
         <div id="GIF">
             <img src="/static/images/turn.gif" alt="Computer man">

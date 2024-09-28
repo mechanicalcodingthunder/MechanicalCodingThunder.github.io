@@ -120,6 +120,21 @@ function renderPage(num, canvas) {
         page.render(renderCtx);
     });
 }
+function Open_pdf(url){
+    document.getElementById("loader").style.display='flex';
+    document.getElementById("pdf-viewer").style.display='none';
+    if(document.getElementById("GIF")){
+        document.getElementById("GIF").style.display='none';
+    };
+    document.getElementById("pdf-viewer").children[0].src='/static/web/viewer.html?file='+url;
+    deleteChild();
+    showpage();
+    function showpage(){
+        document.getElementById("loader").style.display='none';
+        document.getElementById("pdf-viewer").style.display='block';
+        document.getElementsByTagName("footer")[0].style.display='block';
+    }
+}
 function Open_Chapter(url) {
     document.getElementById("loader").style.display='flex';
     document.getElementById("pdf-viewer").style.display='none';
@@ -159,6 +174,7 @@ function Open_Chapter(url) {
 
 function deleteChild(){
     const main_content = document.getElementsByClassName("main-content")[0];
+    document.getElementById("pdf-viewer").style.display='none';
     if(main_content.classList.contains("hide")){
         main_content.classList.remove("hide")
     }
@@ -177,9 +193,9 @@ function show_button(){
     if(main_content.classList.contains("hide")){
         main_content.classList.remove("hide")
     }
-    if(!document.getElementById("download").classList.contains("hide")){
-        document.getElementById("download").classList.add("hide")
-    }
+    // if(!document.getElementById("download").classList.contains("hide")){
+    //     document.getElementById("download").classList.add("hide")
+    // }
 }
 const anchor_all = document.querySelectorAll('div.example ul li>a');
 anchor_all.forEach((anchor)=>{
