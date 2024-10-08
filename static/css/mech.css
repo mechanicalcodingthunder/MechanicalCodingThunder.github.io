@@ -127,8 +127,12 @@ label {
 #pdf-viewer{
     width: 100%;
     text-align: center;
+    display: none;
 }
+#pdf-viewer iframe{
+    height: 100vh;
 
+}
 #number {
     height: 40px;
     width: 250px;
@@ -192,9 +196,6 @@ label {
     
 }
 
-#pdf-viewer {
-    display: block;
-}
 .btn {
     margin: 5px 0 5px 0;
     border: 2px solid rgb(255, 81, 0);
@@ -350,6 +351,9 @@ footer {
     #GIF{
         width: 100%;
     }
+    #pdf-viewer iframe{
+        height: 100vh;
+    }
 }
 
 @media only screen and (max-width: 410px) {
@@ -372,5 +376,8 @@ footer {
     .load-text{
         font-size: 10px;
     }    
+    #pdf-viewer iframe{
+        height: 100vh;
+    }
    
 }
