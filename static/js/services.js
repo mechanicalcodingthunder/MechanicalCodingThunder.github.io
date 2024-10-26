@@ -2,7 +2,7 @@ async function getDirectory(dirname, roll) {
     const url = 'https://api.github.com/repos/mechanicalcodingthunder/MechanicalCodingThunder.github.io/contents/static/Upload/Files/'
     let response = await fetch(url)
     let str = await response.json();
-
+    console.log(str)
     for (const file of str) {
         const file_name = '/static/Upload/Files/' + file.name;
         const roll_no = roll
