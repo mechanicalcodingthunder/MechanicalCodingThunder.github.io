@@ -1,7 +1,7 @@
 async function getDirectory(dirname,roll) {
-    const url = 'https://api.github.com/mechanicalcodingthunder/MechanicalCodingThunder.github.io//tree/main/static/Upload/Files/'
+    const url = 'https://api.github.com/repos/mechanicalcodingthunder/MechanicalCodingThunder.github.io/contents/static/Upload/Files/'
     let response = await fetch(url)
-    // let response = await fetch(dirname);
+    // let response = await fetch(dirname); 
     console.log(response)
     let str = await response.text();
     let el = document.createElement('html');
