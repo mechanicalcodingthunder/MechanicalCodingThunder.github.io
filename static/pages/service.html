@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanical Coding Thunder</title>
+    <link rel="icon" type="image/png" href="/static/images/favicon.png">
+    <link rel="stylesheet" href="/static/css/nav.css">
+    <link rel="stylesheet" href="/static/css/services.css">
+    <script src="/static/js/read-excel-file.min.js"></script>
+    <script src="/static/js/jquery-3.6.3.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main_body">
+        <header>
+            <nav id="navbar" class="stick_top">
+                <div>
+                    <a class="logo ancher-style" href="/">Mechanical Coding Thunder</a>
+                </div>
+                <ul>
+                    <li><a class="ancher-style" href="/">Home</a></li>
+                    <li class="sub-menu">
+                        <a class="ancher-style" href="#">Resources<span class="carret"></span></a>
+                        <ul id="dropdown">
+                            <li class="mech-drop"><a class="ancher-style" href="#">Mechanical<span
+                                        class="carret"></span></a>
+                                <ul>
+                                    <li><a class="ancher-style" href="/static/pages/WT-I.html">WT-I</li>
+                                    <li><a class="ancher-style" href="/static/pages/WT-III.html">WT-III</li>
+                                    <li><a class="ancher-style" href="/static/pages/CNC.html">CNC</li>
+                                    <li><a class="ancher-style" href="/static/pages/EDM.html">EDM</li>
+                                </ul>
+                            </li>
+                            <li><a class="ancher-style" href="/static/pages/cht_course.html">Coding</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="ancher-style" href="/static/pages/service.html">Services</a></li>
+                    <li><a class="ancher-style" href="/static/pages/about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="viewer">
+            <div class="main-content">
+                <div class="popup"><span>Result is Processed Successfully</span>
+                    <button id="close">&times;</button>
+                </div>
+                <div class="cal" id="cal">
+                    <label for="number">Enter your Roll No</label>
+                    <input inputmode="numeric" pattern="[0-9]*" type="text" onkeypress="return onlyNumberkey(event)"
+                        maxlength="12" id="number" name="number">
+                    <button type="button" id="show_result" class="btn" onclick="showresult(event)">Show Result</button>
+                </div>
+            </div>
+        </div>
+        <div id="pdf-viewer"></div>
+    </div>
+    <footer style="display: block;">
+        <div class="center">
+            Copyright 2023 Mechanical Coding Thunder
+        </div>
+    </footer>
+</body>
+<script type="text/javascript" src="/static/build/pdf.js"></script>
+<script type="text/javascript" src="/static/js/services.js"></script>
+
+</html>
