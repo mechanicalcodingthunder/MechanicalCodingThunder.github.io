@@ -81,7 +81,9 @@ async function showresult(evt) {
         rollno.focus();
     } else {
         delete_child();
+        document.getElementById("loader").style.display='flex';
         await getDirectory('https://github.com/mechanicalcodingthunder/oiexam/tree/main/Files/', rollno.value);
+        document.getElementById("loader").style.display='none';
         document.querySelector(".popup").style.display = "block";
         document.getElementById("pdf-viewer").style.display = 'block';
     }

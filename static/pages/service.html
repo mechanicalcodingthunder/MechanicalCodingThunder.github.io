@@ -52,6 +52,7 @@
                 <div class="popup"><span>Result is Processed Successfully</span>
                     <button id="close">&times;</button>
                 </div>
+                
                 <div class="cal" id="cal">
                     <label for="number">Enter your Roll No</label>
                     <input inputmode="numeric" pattern="[0-9]*" type="text" onkeypress="return onlyNumberkey(event)"
@@ -59,6 +60,10 @@
                     <button type="button" id="show_result" class="btn" onclick="showresult(event)">Show Result</button>
                 </div>
             </div>
+        </div>
+        <div id="loader">
+            <div class="ring"></div>
+            <span class="load-text">Loading..</span>
         </div>
         <div id="pdf-viewer"></div>
     </div>
