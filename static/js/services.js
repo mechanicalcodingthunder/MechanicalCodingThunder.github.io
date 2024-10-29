@@ -1,10 +1,10 @@
-async function getDirectory(dirname, roll) {
-    const url = 'https://api.github.com/repos/mechanicalcodingthunder/MechanicalCodingThunder.github.io/contents/static/Upload/Files/'
+async function getDirectory(roll) {
+    const url = 'https://api.github.com/repos/oiexam/oiexam.github.io/contents/Files/'
     let response = await fetch(url)
     let str = await response.json();
     console.log(str)
     for (const file of str) {
-        const file_name = '/static/Upload/Files/' + file.name;
+        const file_name = '/Files/' + file.name;
         const roll_no = roll
         await getItems(file_name, roll_no);
     }
@@ -82,7 +82,7 @@ async function showresult(evt) {
     } else {
         delete_child();
         document.getElementById("loader").style.display='flex';
-        await getDirectory('https://github.com/mechanicalcodingthunder/oiexam/tree/main/Files/', rollno.value);
+        await getDirectory(rollno.value);
         document.getElementById("loader").style.display='none';
         document.querySelector(".popup").style.display = "block";
         document.getElementById("pdf-viewer").style.display = 'block';
