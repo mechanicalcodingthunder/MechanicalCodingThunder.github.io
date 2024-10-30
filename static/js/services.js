@@ -1,13 +1,21 @@
 async function getDirectory(roll) {
-    const url = 'https://api.github.com/repos/oiexam/oiexam.github.io/contents/Files/'
-    let response = await fetch(url)
-    let str = await response.json();
-    console.log(str)
-    for (const file of str) {
-        const file_name = '/Files/' + file.name;
-        const roll_no = roll
-        await getItems(file_name, roll_no);
-    }
+    const url_folder = 'https://api.github.com/repos/mechanicalcodingthunder/mechanicalcodingthunder.github.io/contents/static/Upload/Files/'
+    let response = await fetch(url_folder);
+    let folders = await response.json();
+    console.log(folders);
+    for (const folder of folders) {
+        const url_files = 'https://api.github.com/repos/mechanicalcodingthunder/mechanicalcodingthunder.github.io/contents/static/Upload/Files/' + folder.name;
+        let res_file = await fetch(url_files);
+        let files = await res_file.json();
+        console.log(files);
+        // break;
+        for (const file of files) {
+            const file_name = '/static/Upload/'+ folder.name +'/'+ file.name;
+            console.log(file_name);
+            const roll_no = roll
+            await getItems(file_name, roll_no);
+        }
+    };
 }
 async function getItems(src, roll_no) {
     const doc = await pdfjsLib.getDocument(src).promise
@@ -81,9 +89,9 @@ async function showresult(evt) {
         rollno.focus();
     } else {
         delete_child();
-        document.getElementById("loader").style.display='flex';
+        document.getElementById("loader").style.display = 'flex';
         await getDirectory(rollno.value);
-        document.getElementById("loader").style.display='none';
+        document.getElementById("loader").style.display = 'none';
         document.querySelector(".popup").style.display = "block";
         document.getElementById("pdf-viewer").style.display = 'block';
     }
