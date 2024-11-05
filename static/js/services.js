@@ -1,6 +1,10 @@
 async function getDirectory(roll) {
     const url_folder = 'https://api.github.com/repos/mechanicalcodingthunder/mechanicalcodingthunder.github.io/contents/static/Upload/Files/'
-    let response = await fetch(url_folder);
+    let response = await fetch(url_folder, {
+        headers: {
+            'Authorization': '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',
+        }
+    });
     let folders = await response.json();
     console.log(folders);
     for (const folder of folders) {
@@ -10,12 +14,14 @@ async function getDirectory(roll) {
         console.log(files);
         // break;
         for (const file of files) {
-            const file_name = '/static/Upload/'+ folder.name +'/'+ file.name;
+            const file_name = '/' + folder.path + '/' + file.name;
             console.log(file_name);
             const roll_no = roll
             await getItems(file_name, roll_no);
         }
+        // break;
     };
+
 }
 async function getItems(src, roll_no) {
     const doc = await pdfjsLib.getDocument(src).promise
@@ -94,6 +100,20 @@ async function showresult(evt) {
         document.getElementById("loader").style.display = 'none';
         document.querySelector(".popup").style.display = "block";
         document.getElementById("pdf-viewer").style.display = 'block';
+        const canvasWrapper = document.querySelector('#pdf-viewer');
+        const canvases = canvasWrapper.querySelectorAll('.pdf-page-canvas');
+        for (let i = 0; i < canvases.length; i++) {
+            console.log(i)
+            let canvas = canvases[i]; //hardcoded for testing
+            let context = canvas.getContext('2d');
+            context.fillStyle = 'rgba(255, 255, 0, 0.5)';
+            context.strokeStyle = 'rgba(0, 50, 0, 1)';
+            context.lineWidth = 1;
+            context.beginPath();
+            context.rect(70, 520, canvas.width-150, 40); // adjust coordinates as needed
+            context.fill();
+            context.stroke();
+        }
     }
 }
 function delete_child() {
