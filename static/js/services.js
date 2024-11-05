@@ -9,7 +9,11 @@ async function getDirectory(roll) {
     console.log(folders);
     for (const folder of folders) {
         const url_files = 'https://api.github.com/repos/mechanicalcodingthunder/mechanicalcodingthunder.github.io/contents/static/Upload/Files/' + folder.name;
-        let res_file = await fetch(url_files);
+        let res_file = await fetch(url_files, {
+            headers: {
+                'Authorization': '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',
+            }
+        });
         let files = await res_file.json();
         console.log(files);
         // break;
