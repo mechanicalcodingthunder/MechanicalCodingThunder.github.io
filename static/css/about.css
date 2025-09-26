@@ -55,6 +55,7 @@ img{
     padding: 5px;
     width: 90%;
     display: flex;
+    text-align: justify;
     /* margin: auto; */
 }
 p{
