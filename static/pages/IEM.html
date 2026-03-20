@@ -31,7 +31,7 @@
                                 <li><a class="ancher-style" href="/static/pages/WT-I.html">WT-I</li>
                                 <li><a class="ancher-style" href="/static/pages/WT-III.html">WT-III</li>
                                 <li><a class="ancher-style" href="/static/pages/CNC.html">CNC</li>
-                                <li><a class="ancher-style" href="/static/pages/EDM.html">EDM</li>
+                                <li><a class="ancher-style" href="/static/pages/IEM.html">IEM</li>
                             </ul>
                         </li>
                             <li><a class="ancher-style" href="/static/pages/cht_course.html">Coding</a></li>
@@ -42,8 +42,44 @@
                 </ul>
             </nav>
         </header>
-
-        <div class="main-content">
+        <div class="example sticky">
+            <ul>
+                <li><a class="ancher-style-1" href="javascript:void(0)"
+                        onclick="">Chapter 1</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)"
+                        onclick="">Chapter 2</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)"
+                        onclick="">Chapter 3</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)"
+                        onclick="">Chapter 4</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)"
+                        onclick="">Chapter 5</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)"
+                        onclick="">Chapter 6</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)"
+                        onclick="">Syllabus</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)"
+                        onclick="">A 1</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)"
+                        onclick="">A 2 </a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)"
+                        onclick="">A 3</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="show_button()">Result</a></li>
+            </ul>
+        </div>
+        <div id="loader">
+            <div class="ring"></div>
+            <span class="load-text">Loading..</span>
+        </div>
+        <div id="pdf-viewer">
+            <iframe src="" width="100%"></iframe>
+            <!-- <button id="download" class="btn hide" value="" onclick="open_file(value)"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                    stroke="#403995" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5" />
+                </svg></button> -->
+        </div>
+        <div class="main-content hide">
             <div class="btn_group">
                 <button type="button" id="Check_result" class="btn" onclick="read_file('6th sem.xlsx')">Check Result</button>
             </div>
