@@ -57,9 +57,9 @@
                 <li><a class="ancher-style-1" href="javascript:void(0)"
                         onclick="">Chapter 6</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="">Syllabus</a></li>
+                        onclick="Open_pdf('/static/Upload/IEM Syllabus.pdf')">Syllabus</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="">A 1</a></li>
+                        onclick="Open_pdf('/static/Upload/IEM Assignment 1.pdf')">A 1</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)"
                         onclick="">A 2 </a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)"
@@ -81,14 +81,14 @@
         </div>
         <div class="main-content hide">
             <div class="btn_group">
-                <button type="button" id="Check_result" class="btn" onclick="read_file('6th sem.xlsx')">Check Result</button>
+                <button type="button" id="Check_result" class="btn" onclick="read_file('IEM marks.xlsx')">Check Result</button>
             </div>
             <div class="popup">
                 <button id="close">&times;</button>
                 <div class="cal" id="cal">
                     <label for="number">Enter your Roll No</label>
-                    <input inputmode="numeric" pattern="[0-9]*" type="text" onkeypress="return onlyNumberkey(event)" maxlength="12" id="number"
-                        name="number" placeholder="23/ME/123">
+                    <input inputmode="numeric" type="text" maxlength="12" id="number"
+                        name="number" placeholder="23/ME/123" autocapitalize="word" onkeypress="return onlyNumberkey(event,'text')">
                     <button type="button" id="show_result" class="btn" onclick="showresult(event)">Show Result</button>
                     <p class="result hide" id="result">Hhh</p>
                     <div class="table_container">
