@@ -59,7 +59,7 @@ function showresult(evt) {
     rollno.focus();
   } else {
     console.log("create");
-    create_table(rollno.value);
+    create_table(rollno.value.toUpperCase());
   }
 }
 function create_table(value) {
