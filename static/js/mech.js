@@ -43,14 +43,10 @@ function delete_table() {
     tbl.classList.add("hide");
   }
 }
-function onlyNumberkey(evt, check) {
-  if (check == "text") {
-    evt.target.value = evt.target.value.toUpperCase();
-  } else {
-    var ass = evt.which ? evt.which : evt.keyCode;
-    if (ass > 31 && (ass < 48 || ass > 57)) return false;
-    return true;
-  }
+function onlyNumberkey(evt) {
+  var ass = evt.which ? evt.which : evt.keyCode;
+  if (ass > 31 && (ass < 48 || ass > 57)) return false;
+  return true;
 }
 function showresult(evt) {
   const rollno = evt.target.previousElementSibling;
