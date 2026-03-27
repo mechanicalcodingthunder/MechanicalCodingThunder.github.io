@@ -26,14 +26,16 @@
                     <li class="sub-menu">
                         <a class="ancher-style" href="#">Resources<span class="carret"></span></a>
                         <ul id="dropdown">
-                            <li class="mech-drop"><a class="ancher-style" href="#">Mechanical<span class="carret"></span></a>
-                            <ul>
-                                <li><a class="ancher-style" href="/static/pages/WT-I.html">WT-I</li>
-                                <li><a class="ancher-style" href="/static/pages/WT-III.html">WT-III</li>
-                                <li><a class="ancher-style" href="/static/pages/CNC.html">CNC</li>
-                                <li><a class="ancher-style" href="/static/pages/IEM.html">IEM</li>
-                            </ul>
-                        </li>
+                            <li class="mech-drop"><a class="ancher-style" href="#">Mechanical<span
+                                        class="carret"></span></a>
+                                <ul>
+                                    <li><a class="ancher-style" href="/static/pages/WT-I.html">WT-I</li>
+                                    <li><a class="ancher-style" href="/static/pages/WT-III.html">WT-III</li>
+                                    <li><a class="ancher-style" href="/static/pages/CNC.html">CNC</li>
+                                    <li><a class="ancher-style" href="/static/pages/IEM.html">IEM</li>
+                                    <li><a class="ancher-style" href="/static/pages/PPE.html">PPE</li>
+                                </ul>
+                            </li>
                             <li><a class="ancher-style" href="/static/pages/cht_course.html">Coding</a></li>
                         </ul>
                     </li>
@@ -44,18 +46,30 @@
         </header>
         <div class="example sticky">
             <ul>
-                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/WT-III_Chapter_1.pdf')">Chapter 1</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/WT-III_Chapter_2.pdf')">Chapter 2</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/WT-III_Chapter_3.pdf')">Chapter 3</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/WT-III_Chapter_4.pdf')">Chapter 4</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/WT-III_Chapter_5.pdf')">Chapter 5</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/WT-III_Chapter_6.pdf')">Chapter 6</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/WT-III_Syllabus.pdf')">Syllabus</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/WT-III Prev Paper.pdf')">Prev Paper</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/WT-III Practice Paper.pdf')">Practice Paper</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/WT-III_Assignment_1.pdf')">A1</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/WT-III_Assignment_2.pdf')">A2</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/WT-III_Assignment_3.pdf')">A3</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)"
+                        onclick="Open_pdf('/static/Upload/WT-III_Chapter_1.pdf')">Chapter 1</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)"
+                        onclick="Open_pdf('/static/Upload/WT-III_Chapter_2.pdf')">Chapter 2</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)"
+                        onclick="Open_pdf('/static/Upload/WT-III_Chapter_3.pdf')">Chapter 3</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)"
+                        onclick="Open_pdf('/static/Upload/WT-III_Chapter_4.pdf')">Chapter 4</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)"
+                        onclick="Open_pdf('/static/Upload/WT-III_Chapter_5.pdf')">Chapter 5</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)"
+                        onclick="Open_pdf('/static/Upload/WT-III_Chapter_6.pdf')">Chapter 6</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)"
+                        onclick="Open_pdf('/static/Upload/WT-III_Syllabus.pdf')">Syllabus</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)"
+                        onclick="Open_pdf('/static/Upload/WT-III Prev Paper.pdf')">Prev Paper</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)"
+                        onclick="Open_pdf('/static/Upload/WT-III Practice Paper.pdf')">Practice Paper</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)"
+                        onclick="Open_pdf('/static/Upload/WT-III_Assignment_1.pdf')">A1</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)"
+                        onclick="Open_pdf('/static/Upload/WT-III_Assignment_2.pdf')">A2</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)"
+                        onclick="Open_pdf('/static/Upload/WT-III_Assignment_3.pdf')">A3</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)" onclick="show_button()">Result</a></li>
             </ul>
         </div>
@@ -69,14 +83,15 @@
         </div>
         <div class="main-content hide">
             <div class="btn_group">
-                <button type="button" id="Check_result" class="btn" onclick="read_file('4th sem.xlsx')">Check Result</button>
+                <button type="button" id="Check_result" class="btn" onclick="read_file('4th sem.xlsx')">Check
+                    Result</button>
             </div>
             <div class="popup">
                 <button id="close">&times;</button>
                 <div class="cal" id="cal">
                     <label for="number">Enter your Roll No</label>
-                    <input inputmode="numeric" pattern="[0-9]*" type="text" onkeypress="return onlyNumberkey(event)" maxlength="12" id="number"
-                        name="number">
+                    <input inputmode="numeric" pattern="[0-9]*" type="text" onkeypress="return onlyNumberkey(event)"
+                        maxlength="12" id="number" name="number">
                     <button type="button" id="show_result" class="btn" onclick="showresult(event)">Show Result</button>
                     <p class="result hide" id="result">Hhh</p>
                     <div class="table_container">
@@ -102,4 +117,5 @@
 </body>
 <script type="text/javascript" src="/static/build/pdf.js"></script>
 <script type="text/javascript" src="/static/js/mech.js"></script>
+
 </html>
