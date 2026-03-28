@@ -47,38 +47,38 @@
         </header>
         <div class="example sticky">
             <ul>
-                <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_pdf('/static/Upload/')">Chapter 1</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_pdf('/static/Upload/')">Chapter 2</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_pdf('/static/Upload/')">Chapter 3</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_pdf('/static/Upload/')">Chapter 4</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_pdf('/static/Upload/')">Chapter 5</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_pdf('/static/Upload/')">Chapter 6</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/')">Chapter
+                        1</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/')">Chapter
+                        2</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/')">Chapter
+                        3</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/')">Chapter
+                        4</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/')">Chapter
+                        5</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/')">Chapter
+                        6</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)"
                         onclick="Open_pdf('/static/Upload/')">Syllabus</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)"
                         onclick="Open_pdf('/static/Upload/PPE Lab_1-4.pdf')">Lab Exp 1-4</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)"
                         onclick="Open_pdf('/static/Upload/PPE Lab_5-8.pdf')">Lab Exp 5-8</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_pdf('/static/Upload/')">Paper 1</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_pdf('/static/Upload/')">Paper 2</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_pdf('/static/Upload/')">Paper 3</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_pdf('/static/Upload/')">Paper 4</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_pdf('/static/Upload/')">A 1</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_pdf('/static/Upload/')">A 2 Solution</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_pdf('/static/Upload/')">A 3</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/')">Paper
+                        1</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/')">Paper
+                        2</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/')">Paper
+                        3</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/')">Paper
+                        4</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/')">A 1</a>
+                </li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/')">A 2</a>
+                </li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/')">A 3</a>
+                </li>
                 <li><a class="ancher-style-1" href="javascript:void(0)" onclick="show_button()">Result</a></li>
             </ul>
         </div>
@@ -94,18 +94,16 @@
                     <path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5" />
                 </svg></button> -->
         </div>
-        
         <div class="main-content hide">
             <div class="btn_group">
-                <button type="button" id="Check_result" class="btn" onclick="read_file('')">Check
+                <button type="button" id="Check_result" class="btn" onclick="read_file('PPE_A marks.xlsx')">Check
                     Result</button>
             </div>
             <div class="popup">
                 <button id="close">&times;</button>
                 <div class="cal" id="cal">
                     <label for="number">Enter your Roll No</label>
-                    <input inputmode="numeric" pattern="[0-9]*" type="text" onkeypress="return onlyNumberkey(event)"
-                        maxlength="12" id="number" name="number">
+                    <input inputmode="" type="text" maxlength="12" id="number" name="number" placeholder="24/EE/001">
                     <button type="button" id="show_result" class="btn" onclick="showresult(event)">Show Result</button>
                     <p class="result hide" id="result">Hhh</p>
                     <div class="table_container">
