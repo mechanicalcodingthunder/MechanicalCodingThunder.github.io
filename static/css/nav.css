@@ -19,11 +19,7 @@ html {
 .main_body {
     flex-grow: 1;
 }
-.page_title{
-    font-size: 1.7rem;
-    font-weight: 500;
-    color: #ffffff;
-}
+
 /* navbar start */
 #navbar {
     display: flex;
@@ -92,7 +88,11 @@ html {
     border-top: 6px solid #fff;
     vertical-align: middle;
 }
-
+.page_title{
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: #ffffff;
+}
 #navbar ul li.sub-menu:hover .carret {
     border-top-color: black;
 }
