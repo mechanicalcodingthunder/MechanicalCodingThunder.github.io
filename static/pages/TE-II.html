@@ -20,7 +20,7 @@
         <header>
             <nav id="navbar" class="stick_top">
                 <div>
-                    <p class="page_title">PPE</p>
+                    <p class="page_title">TE-II</p>
                 </div>
                 <ul>
                     <li><a class="ancher-style" href="/">Home</a></li>
@@ -35,7 +35,8 @@
                                     <li><a class="ancher-style" href="/static/pages/CNC.html">CNC</li>
                                     <li><a class="ancher-style" href="/static/pages/IEM.html">IEM</li>
                                     <li><a class="ancher-style" href="/static/pages/PPE.html">PPE</li>
-                                    <li><a class="ancher-style" href="/static/pages/FM.html">FM</li>                       <li><a class="ancher-style" href="/static/pages/TE-II.html">TE-II</li>
+                                    <li><a class="ancher-style" href="/static/pages/FM.html">FM</li>
+                                    <li><a class="ancher-style" href="/static/pages/TE-II.html">TE-II</li>
                                 </ul>
                             </li>
                             <li><a class="ancher-style" href="/static/pages/cht_course.html">Coding</a></li>
@@ -48,22 +49,17 @@
         </header>
         <div class="example sticky">
             <ul>
-                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/')">Chapter
-                        1</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/')">Chapter
-                        2</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/')">Chapter
-                        3</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/PPE_chapter_4.pdf')">Chapter
-                        4</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/')">Chapter
-                        5</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)"onclick="Open_pdf('/static/Upload/TE-II_Syllabus.pdf')">Syllabus</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/')">Unit-1</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/')">Unit-2</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/')">Unit-3</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/PPE_chapter_4.pdf')">Unit-4</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/')">Unit-5</a></li>
+                <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/')">Unit-6</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_pdf('/static/Upload/')">Syllabus</a></li>
+                        onclick="Open_pdf('/static/Upload/')">Lab Exp 1-4</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_pdf('/static/Upload/PPE Lab_1-4.pdf')">Lab Exp 1-4</a></li>
-                <li><a class="ancher-style-1" href="javascript:void(0)"
-                        onclick="Open_pdf('/static/Upload/PPE Lab_5-8.pdf')">Lab Exp 5-8</a></li>
+                        onclick="Open_pdf('/static/Upload/')">Lab Exp 5-8</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/')">Paper
                         1</a></li>
                 <li><a class="ancher-style-1" href="javascript:void(0)" onclick="Open_pdf('/static/Upload/')">Paper
@@ -95,14 +91,14 @@
         </div>
         <div class="main-content hide">
             <div class="btn_group">
-                <button type="button" id="Check_result" class="btn" onclick="read_file('PPE_A marks.xlsx')">Check
+                <button type="button" id="Check_result" class="btn" onclick="read_file('TE-II marks.xlsx')">Check
                     Result</button>
             </div>
             <div class="popup">
                 <button id="close">&times;</button>
                 <div class="cal" id="cal">
                     <label for="number">Enter your Roll No</label>
-                    <input inputmode="" type="text" maxlength="12" id="number" name="number" placeholder="24/EE/001">
+                    <input inputmode="" type="text" maxlength="12" id="number" name="number" placeholder="25/ME/295">
                     <button type="button" id="show_result" class="btn" onclick="showresult(event)">Show Result</button>
                     <p class="result hide" id="result">Hhh</p>
                     <div class="table_container">
