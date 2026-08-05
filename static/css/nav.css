@@ -172,6 +172,9 @@ footer {
 }
 
 @media only screen and (max-width: 409px) {
+    #navbar{
+        flex-direction: column;
+    }
     #navbar ul {
         flex-direction: column;
     }
