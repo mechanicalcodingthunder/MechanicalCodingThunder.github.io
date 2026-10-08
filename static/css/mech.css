@@ -31,6 +31,7 @@ h2 {
 .example ul li {
   list-style: none;
   padding-top: 7px;
+  font-size: 1.5rem;
 }
 
 .ancher-style-1 {
